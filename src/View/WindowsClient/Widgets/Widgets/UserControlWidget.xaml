@@ -4,16 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WindowsClient.Widgets.Widgets"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
     <Grid>
         <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueMidBrush}" MinWidth="256" MinHeight="256" ClipToBounds="True">
             <Grid>
@@ -22,15 +14,9 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <ListBox x:Name="AccountListBox" />
-                <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
-                    <TextBlock Margin="16">Accounts</TextBlock>
-                </materialDesign:ColorZone>
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
-                    <Viewbox Width="22" Height="22">
-                        <Canvas Width="24" Height="24">
-                            <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" Fill="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Button}, Path=Foreground}" />
-                        </Canvas>
-                    </Viewbox>
+                <TextBlock Margin="16">Accounts</TextBlock>
+                <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                    
                 </Button>
             </Grid>
         </Border>

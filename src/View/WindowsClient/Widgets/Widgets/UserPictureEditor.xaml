@@ -16,7 +16,5 @@
         </Grid.ColumnDefinitions>
         <TextBox x:Name="textBox" Grid.Column="0" HorizontalAlignment="Stretch" Height="23" Margin="0,36,0,0" TextWrapping="Wrap" Text="Basic Image Path" VerticalAlignment="Top"/>
         <Button Content="..." Grid.Column="1" Margin="0,27,0,1" Height="Auto" />
-        <Image Source="pack://siteoforigin:,,,/Resources/christoph-szüts-foto.256x256.jpg" x:Name="image" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
-
     </Grid>
 </UserControl>

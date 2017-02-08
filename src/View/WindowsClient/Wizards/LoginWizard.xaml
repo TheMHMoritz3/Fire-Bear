@@ -4,34 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsClient"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:LoginWizard="clr-namespace:WindowsClient.Wizards.LoginWizard" x:Class="WindowsClient.LoginClient"
         mc:Ignorable="d"
-        Title="Login" Height="451.96" Width="698.529"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal"
-        TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}">
+        Title="Login" Height="451.96" Width="698.529">
     <Grid>
-        <materialDesign:ColorZone Mode="PrimaryMid" Padding="16">
-            <DockPanel>
-                <StackPanel Orientation="Horizontal"
-                            materialDesign:RippleAssist.IsCentered="True">
-                    <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" VerticalAlignment="Center" Margin="16 0 0 0"><Run Text="Login - C# XMPP Client"/></TextBlock>
-                </StackPanel>
-            </DockPanel>
-        </materialDesign:ColorZone>
-        <materialDesign:Transitioner SelectedIndex="0" Margin="16,64,16,16">
-            <LoginWizard:LoginWizardPageOne Padding="0" />
-            <materialDesign:TransitionerSlide OpeningEffect="{materialDesign:TransitionEffect FadeIn}">
-                <LoginWizard:LoginEizardPageTwo Padding="0" />
-            </materialDesign:TransitionerSlide>
-            <materialDesign:TransitionerSlide OpeningEffect="{materialDesign:TransitionEffect FadeIn}">
-                <materialDesign:Card Padding="32" Margin="16,64,16,16"/>
-            </materialDesign:TransitionerSlide>
-        </materialDesign:Transitioner>
+        
     </Grid>
 </Window>

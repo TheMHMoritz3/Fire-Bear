@@ -4,40 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsClient"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:CentralWidgets="clr-namespace:WindowsClient.Widgets.CentralWidgets" xmlns:Manager="clr-namespace:WindowsClient.Manager" x:Class="WindowsClient.MainWindow"
         mc:Ignorable="d"
         Title="XMPP-Chat" Height="720" Width="1280"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
-        TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}">
+        TextOptions.TextRenderingMode="Auto">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <materialDesign:DialogHost Identifier="RootDialog" SnackbarMessageQueue="{Binding MessageQueue, ElementName=MainSnackbar}">
-            <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding IsChecked, ElementName=MenuToggleButton}">
-                <materialDesign:DrawerHost.LeftDrawerContent>
-                    <StackPanel Margin="16" MinWidth="212">
-                        <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" DockPanel.Dock="Top" HorizontalAlignment="Right" Margin="16" IsChecked="{Binding IsChecked, ElementName=MenuToggleButton, Mode=TwoWay}"/>
-                        <ListBox x:Name="ListOfContent" SelectionChanged="ListOfContent_SelectionChanged"/>
-                    </StackPanel>
-                </materialDesign:DrawerHost.LeftDrawerContent>
-                <DockPanel x:Name="Panel">
-                    <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                                            Mode="PrimaryMid" DockPanel.Dock="Top">
-                        <DockPanel>
-                            <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
-                                        x:Name="MenuToggleButton"/>
-                            <TextBlock x:Name="Header" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Text="GlobalHeader" />
-                        </DockPanel>
-                    </materialDesign:ColorZone>
-                </DockPanel>
-            </materialDesign:DrawerHost>
-        </materialDesign:DialogHost>
+        
     </Grid>
 </Window>

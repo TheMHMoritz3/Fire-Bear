@@ -4,15 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WindowsClient.Widgets.CentralWidgets"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:Widgets="clr-namespace:WindowsClient.Widgets.Widgets" x:Class="WindowsClient.Widgets.CentralWidgets.ChatWidget"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
-    <materialDesign:ColorZone VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-        <DockPanel>
-            <!--<Menu IsMainMenu="True" DockPanel.Dock="Top">
+    <DockPanel>
+        <!--<Menu IsMainMenu="True" DockPanel.Dock="Top">
                 -->
-            <!--<MenuItem Header="_File">
+        <!--<MenuItem Header="_File">
                     <MenuItem Header="Save">
                         <MenuItem.Icon>
                             <materialDesign:PackIcon Kind="ContentSave" />
@@ -36,7 +34,7 @@
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>-->
-            <!--
+        <!--
                 <MenuItem Header="_Edit">
                     <MenuItem Header="_Cut" Command="Cut">
                         <MenuItem.Icon>
@@ -61,63 +59,53 @@
                     <MenuItem Header="Wiki" />
                 </MenuItem>
             </Menu>-->
-            <ToolBarTray DockPanel.Dock="Top">
-                <ToolBar Style="{DynamicResource MaterialDesignToolBar}">
-                    <Button Command="Cut" ToolTip="Cut" ToolBar.OverflowMode="AsNeeded">
-                        <materialDesign:PackIcon Kind="ContentCut" />
-                    </Button>
-                    <Button Command="Copy" ToolTip="Copy that stuff" ToolBar.OverflowMode="AsNeeded">
-                        <materialDesign:PackIcon Kind="ContentCopy" />
-                    </Button>
-                    <Separator />
-                    <Button Command="Paste" ToolTip="Paste some stuff" ToolBar.OverflowMode="AsNeeded">
-                        <materialDesign:PackIcon Kind="ContentPaste" />
-                    </Button>
-                    <Separator />
-                    <Label Content="Font size:" VerticalAlignment="Center"/>
-                    <ComboBox>
-                        <ComboBoxItem Content="8"/>
-                        <ComboBoxItem Content="10"/>
-                        <ComboBoxItem IsSelected="True" Content="12"/>
-                        <ComboBoxItem Content="14"/>
-                        <ComboBoxItem Content="16"/>
-                        <ComboBoxItem Content="18"/>
-                        <ComboBoxItem Content="20"/>
-                        <ComboBoxItem Content="22"/>
-                        <ComboBoxItem Content="24"/>
-                        <ComboBoxItem Content="26"/>
-                        <ComboBoxItem Content="28"/>
-                    </ComboBox>
-                    <Label Content="Font:" VerticalAlignment="Center"/>
-                    <ComboBox>
-                        <ComboBoxItem Content="Arial"/>
-                        <ComboBoxItem IsSelected="True" Content="Helvetica?"/>
-                        <ComboBoxItem Content="Some Font"/>
-                    </ComboBox>
-                    <ListBox Grid.Column="1" Grid.Row="2" Style="{StaticResource MaterialDesignToolToggleFlatListBox}" SelectionMode="Extended" Margin="0 8 0 0">
-                        <ListBox.ToolTip>
-                            <StackPanel>
-                                <TextBlock Text="MaterialDesignToolToggleListBox" />
-                                <TextBlock Text="Multiple selection" />
-                                <TextBlock Text="ListBoxAssist.IsToggle allows more natural toggle behaviour" />
-                            </StackPanel>
-                        </ListBox.ToolTip>
-                        <ListBoxItem>
-                            <materialDesign:PackIcon Kind="FormatBold"/>
-                        </ListBoxItem>
-                        <ListBoxItem>
-                            <materialDesign:PackIcon Kind="FormatItalic"/>
-                        </ListBoxItem>
-                        <ListBoxItem x:Name="UnderlineCheckbox">
-                            <materialDesign:PackIcon Kind="FormatUnderline"/>
-                        </ListBoxItem>
-                    </ListBox>
-                </ToolBar>
-            </ToolBarTray>
-            <Widgets:UserControlWidget DockPanel.Dock="Left"/>
-            <materialDesign:Card Margin="4" DockPanel.Dock="Right" VerticalAlignment="Stretch">
-                <Widgets:ChatList Height="Auto"/>
-            </materialDesign:Card>
-        </DockPanel>
-    </materialDesign:ColorZone>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar Style="{DynamicResource MaterialDesignToolBar}">
+                <Button Command="Cut" ToolTip="Cut" ToolBar.OverflowMode="AsNeeded">
+                </Button>
+                <Button Command="Copy" ToolTip="Copy that stuff" ToolBar.OverflowMode="AsNeeded">
+                </Button>
+                <Separator />
+                <Button Command="Paste" ToolTip="Paste some stuff" ToolBar.OverflowMode="AsNeeded">
+                </Button>
+                <Separator />
+                <Label Content="Font size:" VerticalAlignment="Center"/>
+                <ComboBox>
+                    <ComboBoxItem Content="8"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem IsSelected="True" Content="12"/>
+                    <ComboBoxItem Content="14"/>
+                    <ComboBoxItem Content="16"/>
+                    <ComboBoxItem Content="18"/>
+                    <ComboBoxItem Content="20"/>
+                    <ComboBoxItem Content="22"/>
+                    <ComboBoxItem Content="24"/>
+                    <ComboBoxItem Content="26"/>
+                    <ComboBoxItem Content="28"/>
+                </ComboBox>
+                <Label Content="Font:" VerticalAlignment="Center"/>
+                <ComboBox>
+                    <ComboBoxItem Content="Arial"/>
+                    <ComboBoxItem IsSelected="True" Content="Helvetica?"/>
+                    <ComboBoxItem Content="Some Font"/>
+                </ComboBox>
+                <ListBox Grid.Column="1" Grid.Row="2" SelectionMode="Extended" Margin="0 8 0 0">
+                    <ListBox.ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="MaterialDesignToolToggleListBox" />
+                            <TextBlock Text="Multiple selection" />
+                            <TextBlock Text="ListBoxAssist.IsToggle allows more natural toggle behaviour" />
+                        </StackPanel>
+                    </ListBox.ToolTip>
+                    <ListBoxItem>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                    </ListBoxItem>
+                    <ListBoxItem x:Name="UnderlineCheckbox">
+                    </ListBoxItem>
+                </ListBox>
+            </ToolBar>
+        </ToolBarTray>
+        <Widgets:UserControlWidget DockPanel.Dock="Left"/>
+    </DockPanel>
 </UserControl>

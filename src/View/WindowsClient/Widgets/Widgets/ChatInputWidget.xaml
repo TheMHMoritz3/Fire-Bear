@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:WindowsClient.Widgets.Widgets"
              mc:Ignorable="d" Height="40.678" Width="300">
     <Grid>
@@ -12,11 +11,8 @@
             <ColumnDefinition Width="240*"/>
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
-        <materialDesign:PackIcon Grid.Column="0" Kind="Comment" Foreground="{Binding ElementName=CommentTextBox, Path=BorderBrush}" Height="Auto" VerticalAlignment="Center" />
-        <TextBox Grid.Column="1" x:Name="CommentTextBox" materialDesign:HintAssist.Hint="Message" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-        <Button Grid.Column="2" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
-                        ToolTip="MaterialDesignFloatingActionMiniButton" Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <materialDesign:PackIcon Kind="Send" />
+        <TextBox Grid.Column="1" x:Name="CommentTextBox" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <Button Grid.Column="2"  Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
         </Button>
     </Grid>
 </UserControl>

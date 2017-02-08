@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:WindowsClient.Widgets.Widgets"
              mc:Ignorable="d" d:DesignHeight="38" d:DesignWidth="380">
     <Grid>
@@ -13,19 +12,5 @@
             <ColumnDefinition Width="178*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="label" Content="@" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.702,0.562" Grid.Column="1" Margin="0,0,0,0" Height="26"/>
-        <TextBox Grid.Row="1" Grid.Column="0" x:Name="UsernameTextBox" materialDesign:HintAssist.Hint="Username">
-            <Binding Path="Username">
-                <Binding.ValidationRules>
-                    <!--<Validationrules:NotEmptyValidation ValidatesOnTargetUpdated="True"/>-->
-                </Binding.ValidationRules>
-            </Binding>
-        </TextBox>
-        <TextBox Grid.Row="1" Grid.Column="2" x:Name="ServerTextbox" materialDesign:HintAssist.Hint="ServerName" Margin="0,0,0,0">
-            <Binding Path="ServerName" UpdateSourceTrigger="PropertyChanged">
-                <Binding.ValidationRules>
-                    <!--<Validationrules:NotEmptyValidation ValidatesOnTargetUpdated="True"/>-->
-                </Binding.ValidationRules>
-            </Binding>
-        </TextBox>
     </Grid>
 </UserControl>

@@ -3,26 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:WindowsClient.Widgets.Widgets"
              xmlns:Validationrules="clr-namespace:WindowsClient.Manager.Validationrules" x:Class="WindowsClient.Widgets.Widgets.UserEdiWidget"
              mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="420">
-    <materialDesign:Card HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2" Grid.ColumnSpan="2">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <CheckBox x:Name="IsActiveCheckbox" Content="Aktiver Account" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Height="18" Width="106"/>
-            <local:ServerAndUsernameWidget Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <local:UserPictureEditor Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <local:UserPasswordWidget Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        </Grid>
-    </materialDesign:Card>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <CheckBox x:Name="IsActiveCheckbox" Content="Aktiver Account" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Height="18" Width="106"/>
+        <local:ServerAndUsernameWidget Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <local:UserPictureEditor Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <local:UserPasswordWidget Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    </Grid>
 </UserControl>

@@ -4,43 +4,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WindowsClient.Wizards.LoginWizard"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="300" Width="660">
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
-    <materialDesign:ColorZone VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-        <StackPanel VerticalAlignment="Center" Height="300">
-            <TextBlock>You have to Login to Proceed.</TextBlock>
-            <materialDesign:Card Padding="32" Margin="4 4 0 0">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <PasswordBox Grid.Row="0" Grid.Column="1" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
-                    <PasswordBox Grid.Row="1" Grid.Column="1" x:Name="RetypePasswordBox" materialDesign:HintAssist.Hint="Retype Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
-                    <!--<PasswordBox Grid.Row="1" Grid.Column="1" x:Name="FloatingPasswordBox" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />-->
-                </Grid>
-            </materialDesign:Card>
-            <!-- you can easily use the move next, previous, first and last commands -->
-            <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Margin="16"
-                Command="{x:Static materialDesign:Transitioner.MoveNextCommand}" HorizontalAlignment="Right" VerticalAlignment="Center">
-                <materialDesign:PackIcon Kind="ArrowRightBold" />
-            </Button>
-        </StackPanel>
-    </materialDesign:ColorZone>
+    <StackPanel VerticalAlignment="Center" Height="300">
+        <TextBlock>You have to Login to Proceed.</TextBlock>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+        </Grid>
+        <!-- you can easily use the move next, previous, first and last commands -->
+    </StackPanel>
 </UserControl>
