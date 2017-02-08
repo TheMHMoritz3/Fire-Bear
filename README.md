@@ -1,4 +1,4 @@
 # Fire-Bear
 An Open Source XMPP-Client
 
-Travis Build: [![Build Status](https://travis-ci.org/TheMHMoritz3/Fire-Bear.svg?branch=master)](https://travis-ci.org/TheMHMoritz3/Fire-Bear)
+CI Build: [![Build status](https://ci.appveyor.com/api/projects/status/9pmji9ii45kb3wkv?svg=true)](https://ci.appveyor.com/project/TheMHMoritz3/fire-bear)
