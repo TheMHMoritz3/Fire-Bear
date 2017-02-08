@@ -1,8 +1,8 @@
 language: csharp
-solution: ./win32/XMPP Client.sln
+solution: ./win32/XMPP-Client.sln
 install:
-  - sudo apt-get install -y gtk-sharp2
-  - nuget restore ./win32/XMPP Client.sln
+  - nuget restore ./win32/XMPP-Client.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  # - xbuild /p:Configuration=Release ./win32/XMPP Client.sln
-  - mono ./packages/xunit.runners.*/tools/xunit.console.clr4.exe ./bin/TestModel.dll
+  - xbuild /p:Configuration=Release ./win32/XMPP-Client.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./bin/TestModel.dll
