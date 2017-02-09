@@ -100,113 +100,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Items\ViewSliderItem.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Items\ViewSliderItem.cs" />
     <Compile Include="Manager\InstanceManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
     <Compile Include="Manager\Validationrules\NotEmptyValidation.cs" />
-    <Compile Include="Widgets\CentralWidgets\AccountManagement.xaml.cs">
-      <DependentUpon>AccountManagement.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\CentralWidgets\ChatWidget.xaml.cs">
-      <DependentUpon>ChatWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\CentralWidgets\OptionsWidget.xaml.cs">
-      <DependentUpon>OptionsWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\ChatInputWidget.xaml.cs">
-      <DependentUpon>ChatInputWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\ChatList.xaml.cs">
-      <DependentUpon>ChatList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\ServerAndUsernameWidget.xaml.cs">
-      <DependentUpon>ServerAndUsernameWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\UserControlWidget.xaml.cs">
-      <DependentUpon>UserControlWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\UserEditWidget.xaml.cs">
-      <DependentUpon>UserEditWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\UserPasswordWidget.xaml.cs">
-      <DependentUpon>UserPasswordWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\UserPictureEditor.xaml.cs">
-      <DependentUpon>UserPictureEditor.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\LoginWizard\LoginWizardPageTwo.xaml.cs">
-      <DependentUpon>LoginWizardPageTwo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\LoginWizard\LoginWizardPageOne.xaml.cs">
-      <DependentUpon>LoginWizardPageOne.xaml</DependentUpon>
+    <Compile Include="MessageAndUserWidget.xaml.cs">
+      <DependentUpon>MessageAndUserWidget.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Widgets\CentralWidgets\AccountManagement.xaml">
+    <Page Include="MessageAndUserWidget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\CentralWidgets\ChatWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\CentralWidgets\OptionsWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\ChatInputWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\ChatList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\ServerAndUsernameWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\UserControlWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\UserEditWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\UserPasswordWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\UserPictureEditor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Wizards\LoginWizard.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Wizards\LoginWizard.xaml.cs">
-      <DependentUpon>LoginWizard.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Wizards\LoginWizard\LoginWizardPageTwo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Wizards\LoginWizard\LoginWizardPageOne.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -238,9 +153,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\christoph-szüts-foto.256x256.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
@@ -253,7 +165,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Widgets\Widgets\Eventhandler\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Model\Model\Model.csproj">

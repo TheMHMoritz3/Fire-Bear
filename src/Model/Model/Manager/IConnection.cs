@@ -21,7 +21,7 @@ namespace Model.Manager
     public abstract class IConnection
     {
         /// <summary>
-        /// Konstructor
+        /// Constructor
         /// </summary>
         public IConnection()
         {
@@ -29,7 +29,7 @@ namespace Model.Manager
             Sockets = new List<Socket>();
         }
         /// <summary>
-        /// Öffnet eine Verbindung
+        /// Opens a async. connection
         /// </summary>
         /// <param name="dns">DNS String</param>
         /// <param name="port">Port as Integer</param>
@@ -46,10 +46,9 @@ namespace Model.Manager
             Connect(remoteEndPoint, socket);
         }
         /// <summary>
-        /// Soll die Verbindung schließen.
-        /// Benötigt Login, da mehere Sockets offen sein können.
+        /// Will close the connection with the Given Login
         /// </summary>
-        /// <param name="login">Login um die Verbindung von den Anderen Verbindungen zu unterscheiden.</param>
+        /// <param name="login">Login to get support diffrent connecitons</param>
         public void closeConnection(LoginData login)
         {
             int searchedElement;
@@ -65,7 +64,7 @@ namespace Model.Manager
         // public abstract void sendMessage(LoginData login/*, Message message*/);
 
         /// <summary>
-        /// 
+        /// Is called from open connection
         /// </summary>
         /// <param name="remoteEP"></param>
         /// <param name="client"></param>
@@ -77,7 +76,7 @@ namespace Model.Manager
             ConnectDone.WaitOne();
         }
         /// <summary>
-        /// Wird bei einem Connect auf den Javver Server ausgeführt.
+        /// Is called if client connects to server
         /// </summary>
         /// <param name="asyncResult">The result of the Conection</param>
         protected static void ConnectCallback(IAsyncResult asyncResult)
@@ -102,7 +101,7 @@ namespace Model.Manager
             }
         }
         /// <summary>
-        /// Wird von sendMessage(...) aufgerufen, da erst noch der Socket herausgefunden werden muss und der String erstellt werdem soll.
+        /// Is called from sendMessage(...)because of the creation or the serach of the Socket
         /// </summary>
         /// <param name="client"></param>
         /// <param name="data"></param>
@@ -116,7 +115,7 @@ namespace Model.Manager
                 new AsyncCallback(SendCallback), client);
         }
         /// <summary>
-        /// Ist der Callback von Send.
+        /// Is callback of Send
         /// </summary>
         /// <param name="asyncResult"></param>
         protected static void SendCallback(IAsyncResult asyncResult)
@@ -139,9 +138,9 @@ namespace Model.Manager
             }
         }
         /// <summary>
-        /// Wird vom Externen thread aufgerufen, um Nachrichten zu empfangen
+        /// Is called to read the message of the socket
         /// </summary>
-        /// <param name="client">Socket ist der CLient von dem die Nachricht ausgeht</param>
+        /// <param name="client">socket where the connection </param>
         protected static void Receive(Socket client)
         {
             try
@@ -160,9 +159,9 @@ namespace Model.Manager
             }
         }
         /// <summary>
-        /// Wird vom Emfpangsevent aufgerufen.
+        /// Is called form the recive Event
         /// </summary>
-        /// <param name="asyncResult"> Result vom Empfangsevent.</param>
+        /// <param name="asyncResult"> Result of the recive-event</param>
         protected static void ReceiveCallback(IAsyncResult asyncResult)
         {
             try
@@ -209,7 +208,7 @@ namespace Model.Manager
             }
         }
         /// <summary>
-        /// Event wird getriggerted wenn eine Nachricht empfangen wird.
+        /// Is triggered if Message is Recived
         /// </summary>
         //public event EventHandler RecivedMessage;
         private static MessageManager ResultManager = new MessageManager();

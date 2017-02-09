@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WindowsClient.Wizards.LoginWizard
+namespace WindowsClient.Widgets.Widgets
 {
     /// <summary>
-    /// Interaction logic for LoginEizardPageTwo.xaml
+    /// Interaction logic for MessageAndUserWidget.xaml
     /// </summary>
-    public partial class LoginEizardPageTwo : UserControl
+    public partial class MessageAndUserWidget : UserControl
     {
-        public LoginEizardPageTwo()
+        public MessageAndUserWidget()
         {
             InitializeComponent();
         }
