@@ -107,14 +107,21 @@
     <Compile Include="Manager\InstanceManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
     <Compile Include="Manager\Validationrules\NotEmptyValidation.cs" />
-    <Compile Include="MessageAndUserWidget.xaml.cs">
+    <Compile Include="Widgets\ChatMessageWritingWidget.xaml.cs">
+      <DependentUpon>ChatMessageWritingWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\MessageAndUserWidget.xaml.cs">
       <DependentUpon>MessageAndUserWidget.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MessageAndUserWidget.xaml">
+    <Page Include="Widgets\ChatMessageWritingWidget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Widgets\MessageAndUserWidget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
