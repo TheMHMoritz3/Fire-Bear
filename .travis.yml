@@ -1,8 +1,0 @@
-language: csharp
-solution: ./win32/XMPP-Client.sln
-install:
-  - nuget restore ./win32/XMPP-Client.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
-script:
-  - xbuild /p:Configuration=Release ./win32/XMPP-Client.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./bin/TestModel.dll
