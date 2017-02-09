@@ -18,7 +18,7 @@ namespace Model.Manager
     /// <summary>
     /// IConnection Manages the connection.
     /// </summary>
-    public class IConnection
+    public abstract class IConnection
     {
         /// <summary>
         /// Konstructor

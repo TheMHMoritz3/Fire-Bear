@@ -28,11 +28,6 @@ namespace WindowsClient
         {
             InitializeComponent();
             createInstanceManager();
-            //Header.Text = Manager.generateMenuManager().WidgetArray[0].Title;
-            //Panel.Children.Add(Manager.generateMenuManager().getContentOfCurrentItem());
-            IConnection connection = new IConnection();
-            //Thread ConnectionThread = new Thread(()=>connection.openConnection("jabber.german-software-engineers.com", 5222, new LoginData("the_mhmoritz3","", "german-software-engineers.com")));
-            //ConnectionThread.Start();
         }
 
         public void createInstanceManager()
