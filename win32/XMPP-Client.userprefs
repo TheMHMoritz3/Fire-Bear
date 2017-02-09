@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="../src/View/LinuxClient/LinuxClient.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../src/View/LinuxClient/MainWindow.cs">
+    <Files>
+      <File FileName="../src/View/LinuxClient/Program.cs" Line="13" Column="23" />
+      <File FileName="../src/View/LinuxClient/MainWindow.cs" Line="19" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
