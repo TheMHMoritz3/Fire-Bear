@@ -10,12 +10,22 @@
     <DockPanel>
         <Menu x:Name="MainMenu" HorizontalAlignment="Stretch" DockPanel.Dock="Top" >
             <MenuItem Header="File" >
-                <MenuItem Header="Login" HorizontalAlignment="Right" Width="140"/>
-                <MenuItem Header="Logout" HorizontalAlignment="Right" Width="140"/>
+                <MenuItem Header="Login"/>
+                <MenuItem Header="Logout"/>
                 <Separator/>
-                <MenuItem Header="Close" HorizontalAlignment="Right" Width="140" Click="MenuItem_Click"/>
+                <MenuItem Header="Close" Click="MenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="Options">
+                <MenuItem Header="Server-Options"/>
+                <MenuItem Header="Client-Options"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="Help"/>
+                <Separator />
+                <MenuItem Header="Licence"/>
+                <MenuItem Header="Contribution"/>
             </MenuItem>
         </Menu>
-        <Widgets:MessageAndUserWidget HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+        <Widgets:MessageAndUserWidget HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" />
     </DockPanel>
 </Window>
