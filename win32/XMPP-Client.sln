@@ -21,6 +21,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestModel", "..\src\UnitTests\TestModel\TestModel.csproj", "{B082C528-819A-4A59-A0C2-BCABAA3E51F9}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "OnlineClient", "..\src\View\OnlineClient\", "{3ECA5C9A-8E3E-4B33-9E8C-6C1E1E093ED9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54802"
+		Debug.AspNetCompiler.PhysicalPath = "..\src\View\OnlineClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54802\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54802"
+		Release.AspNetCompiler.PhysicalPath = "..\src\View\OnlineClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54802\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54802"
+		SlnRelativePath = "..\src\View\OnlineClient\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +72,10 @@ Global
 		{B082C528-819A-4A59-A0C2-BCABAA3E51F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B082C528-819A-4A59-A0C2-BCABAA3E51F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B082C528-819A-4A59-A0C2-BCABAA3E51F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECA5C9A-8E3E-4B33-9E8C-6C1E1E093ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECA5C9A-8E3E-4B33-9E8C-6C1E1E093ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECA5C9A-8E3E-4B33-9E8C-6C1E1E093ED9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECA5C9A-8E3E-4B33-9E8C-6C1E1E093ED9}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +87,6 @@ Global
 		{DDE60809-D767-4551-A3DC-B7432E6D4F26} = {F3D9D2D0-682D-4E9C-A51A-0F3BBC5AA4A5}
 		{DBF7E81B-5BC7-4D86-9628-A824980115B9} = {F3D9D2D0-682D-4E9C-A51A-0F3BBC5AA4A5}
 		{B082C528-819A-4A59-A0C2-BCABAA3E51F9} = {5A06DECD-B013-4023-B2CA-F6F8CDE62BC6}
+		{3ECA5C9A-8E3E-4B33-9E8C-6C1E1E093ED9} = {755B531B-0784-4453-9C57-E1E546682911}
 	EndGlobalSection
 EndGlobal
