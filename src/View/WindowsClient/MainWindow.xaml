@@ -10,10 +10,10 @@
     <DockPanel>
         <Menu x:Name="MainMenu" HorizontalAlignment="Stretch" DockPanel.Dock="Top" >
             <MenuItem Header="File" >
-                <MenuItem Header="Login" HorizontalAlignment="Right" Width="140"/>
+                <MenuItem Header="Login" HorizontalAlignment="Right" Width="140" Click="MenuItem_LoginClick"/>
                 <MenuItem Header="Logout" HorizontalAlignment="Right" Width="140"/>
                 <Separator/>
-                <MenuItem Header="Close" HorizontalAlignment="Right" Width="140" Click="MenuItem_Click"/>
+                <MenuItem Header="Close" HorizontalAlignment="Right" Width="140" Click="MenuItem_CloseClick"/>
             </MenuItem>
         </Menu>
         <Widgets:MessageAndUserWidget HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>

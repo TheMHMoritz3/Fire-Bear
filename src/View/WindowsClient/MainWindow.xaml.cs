@@ -24,9 +24,15 @@ namespace WindowsClient
             InitializeComponent();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_CloseClick(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void MenuItem_LoginClick(object sender, RoutedEventArgs e)
+        {
+            LoginDialog.LoginDialog loginDialog = new LoginDialog.LoginDialog();
+            loginDialog.ShowDialog();
         }
     }
 }

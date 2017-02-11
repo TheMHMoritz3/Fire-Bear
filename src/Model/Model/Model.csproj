@@ -48,6 +48,7 @@
     <Compile Include="Enumeration\EncodingTypes.cs" />
     <Compile Include="Manager\IConnection.cs" />
     <Compile Include="Manager\IInstanceManager.cs" />
+    <Compile Include="Manager\States\IState.cs" />
     <Compile Include="Manager\States\StateObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

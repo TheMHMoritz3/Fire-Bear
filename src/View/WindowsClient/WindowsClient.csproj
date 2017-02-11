@@ -101,23 +101,38 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Items\ViewSliderItem.cs" />
+    <Compile Include="LoginDialog\LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\InstanceManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
     <Compile Include="Manager\Validationrules\NotEmptyValidation.cs" />
+    <Compile Include="States\LoginDialog\LoginDialogState.cs" />
     <Compile Include="Widgets\ChatMessageWritingWidget.xaml.cs">
       <DependentUpon>ChatMessageWritingWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\LoginDialog\LoginButtonBox.xaml.cs">
+      <DependentUpon>LoginButtonBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Widgets\MessageAndUserWidget.xaml.cs">
       <DependentUpon>MessageAndUserWidget.xaml</DependentUpon>
     </Compile>
+    <Page Include="LoginDialog\LoginDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Widgets\ChatMessageWritingWidget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Widgets\LoginDialog\LoginButtonBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
