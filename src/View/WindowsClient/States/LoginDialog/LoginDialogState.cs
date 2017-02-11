@@ -15,15 +15,45 @@ namespace WindowsClient.States.LoginDialog
         /// <summary>
         /// Possible Loginstates for a Dialog
         /// </summary>
-        public enum LoginDialogStates
+        public enum LoginDialogStates:int
         {
-            Accepted,
-            Canceled
+            NoState = 0,
+            Accepted = 1,
+            Canceled = 2
         };
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public LoginDialogState()
+        {
+            _CurrentStatus = LoginDialogStates.NoState;
+        }
+
+        /// <summary>
+        /// That the Dialog is Able to Set the Current Status
+        /// </summary>
+        /// <param name="state">Current Status</param>
+        public void setStaus(LoginDialogStates state)
+        {
+            _CurrentStatus = state;
+        }
+
+        /// <summary>
+        /// Returns the current dialog state
+        /// </summary>
+        /// <returns>Current dialog state as LoginDialogStates</returns>
+        public LoginDialogStates currentDialogState()
+        {
+            return _CurrentStatus;
+        }
+
 
         public int getState()
         {
-            return 0;
+            return (int)_CurrentStatus;
         }
+
+        private LoginDialogStates _CurrentStatus;
     }
 }

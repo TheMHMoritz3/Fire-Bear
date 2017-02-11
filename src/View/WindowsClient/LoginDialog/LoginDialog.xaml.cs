@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WindowsClient.States.LoginDialog;
 
 namespace WindowsClient.LoginDialog
 {
@@ -19,9 +20,38 @@ namespace WindowsClient.LoginDialog
     /// </summary>
     public partial class LoginDialog : Window
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public LoginDialog()
         {
             InitializeComponent();
+            generateDialogState();
         }
+
+        /// <summary>
+        /// Generates the LoginDialogState
+        /// </summary>
+        private void generateDialogState()
+        {
+            _StateManager = new LoginDialogState();
+        }
+
+        /// <summary>
+        /// StateManager of LoginDialog
+        /// </summary>
+        private LoginDialogState _StateManager;
+
+        /// <summary>
+        /// Is Called, when close Event is Triggered
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void onCloseClicked(object sender, EventArgs e)
+        {
+            _StateManager.setStaus(LoginDialogState.LoginDialogStates.Canceled);
+        }
+
+
     }
 }

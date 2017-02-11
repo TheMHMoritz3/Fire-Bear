@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:WindowsClient.Widgets.LoginDialog"
              mc:Ignorable="d" d:DesignHeight="20" d:DesignWidth="155">
     <Grid>
-        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Width="75" Height="20" VerticalAlignment="Top"/>
-        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Width="75" Height="20" VerticalAlignment="Top" Click="onLoginClicked"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="onCancelClicked"/>
 
     </Grid>
 </UserControl>

@@ -20,9 +20,41 @@ namespace WindowsClient.Widgets.LoginDialog
     /// </summary>
     public partial class LoginButtonBox : UserControl
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public LoginButtonBox()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Is called, when LoginButton is Triggered
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void onLoginClicked(object sender, RoutedEventArgs e)
+        {
+            LoginClicked(sender, e);
+        }
+
+        /// <summary>
+        /// Is called, when CancelButton is Triggered
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param
+        private void onCancelClicked(object sender, RoutedEventArgs e)
+        {
+            CancelClicked(sender, e);
+        }
+
+        /// <summary>
+        /// Event to push the click of the LoginButton to every needed Process
+        /// </summary>
+        public event EventHandler LoginClicked;
+        /// <summary>
+        /// Event to push the click of the CancelButton to every needed Process
+        /// </summary>
+        public event EventHandler CancelClicked;
     }
 }
