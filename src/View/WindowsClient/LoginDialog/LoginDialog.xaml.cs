@@ -27,6 +27,7 @@ namespace WindowsClient.LoginDialog
         {
             InitializeComponent();
             generateDialogState();
+            connectEventsWithWindow();
         }
 
         /// <summary>
@@ -52,6 +53,22 @@ namespace WindowsClient.LoginDialog
             _StateManager.setStaus(LoginDialogState.LoginDialogStates.Canceled);
         }
 
+        /// <summary>
+        /// Connects the Events of the LoginButtonBox with this Window.
+        /// </summary>
+        private void connectEventsWithWindow()
+        {
 
+        }
+
+        private void onCancelClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void onLoginClicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

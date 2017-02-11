@@ -11,9 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B7BA27
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit-Tests", "Unit-Tests", "{FDFA5761-62EA-4B58-A5EE-288C6FB41C70}"
-	ProjectSection(SolutionItems) = preProject
-		..\src\UnitTests\TestModel\TestModel.csproj = ..\src\UnitTests\TestModel\TestModel.csproj
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{658A38B4-ADCA-46D5-B193-9D4BD707EDE0}"
 	ProjectSection(SolutionItems) = preProject
