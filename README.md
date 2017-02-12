@@ -11,6 +11,6 @@ An Open Source XMPP-Client
 You need Visual Studio and then you can get startet. On Windows you have to open in the win32 folder the solution-file Windows-Clinent.
 
 ### Linux
-You need Monodovelop an then you are good to go. Only open in `./win32/Linux-Solution/` the `Linux-Solution.sln`-File.
+You need Monodovelop and then you are good to go. Only open in `./win32/Linux-Solution/` the `Linux-Solution.sln`-File.
 
 More details in the Wiki 
