@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ContactTest.cs" />
     <Compile Include="Data\LoginDataTest.cs" />
     <Compile Include="Data\Security\TestSecureStringConverter.cs" />
     <Compile Include="Data\XML\XMLElementTest.cs" />
