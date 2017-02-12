@@ -1,11 +1,8 @@
 version: 17.02.{build}
+install:
+- cmd: nuget restore ./win32/Windows-Client.sln
 build:
   project: ./win32/Windows-Client.sln
-  verbosity: minimal
+  verbosity: detailed
 artifacts:
 - path: ./bin/*
-notifications:
-- provider: GitHubPullRequest
-  on_build_success: true
-  on_build_failure: true
-  on_build_status_changed: false
