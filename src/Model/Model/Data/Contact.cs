@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Data
 {
-    class Contact
+    public class Contact
     {
         /// <summary>
         /// used to Safe Contact Information for messaging
