@@ -22,12 +22,18 @@ namespace TestModel.Data
         }
 
         [Test]
-        public void testProperties()
+        public void testPropertieUserName()
+        {
+            Contact contact = new Contact();
+            contact.UserName = "fIREbEAR";
+            Assert.That(contact.UserName, Is.EqualTo("fIREbEAR"));
+        }
+
+        [Test]
+        public void testPropertieServer()
         {
             Contact contact = new Contact();
             contact.Server = "german-software-engineers.com";
-            contact.UserName = "fIREbEAR";
-            Assert.That(contact.UserName, Is.EqualTo("fIREbEAR"));
             Assert.That(contact.Server, Is.EqualTo("german-software-engineers.com"));
         }
     }
