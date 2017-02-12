@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Contact.cs" />
     <Compile Include="Data\LoginData.cs" />
     <Compile Include="Data\MessageManager.cs" />
     <Compile Include="Data\Security\SecureStringConverter.cs" />
