@@ -89,6 +89,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ContactDialog\CreateContactDialog.xaml.cs">
+      <DependentUpon>CreateContactDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Items\ViewSliderItem.cs" />
     <Compile Include="LoginDialog\LoginDialog.xaml.cs">
       <DependentUpon>LoginDialog.xaml</DependentUpon>
@@ -109,6 +112,10 @@
     <Compile Include="Widgets\MessageAndUserWidget.xaml.cs">
       <DependentUpon>MessageAndUserWidget.xaml</DependentUpon>
     </Compile>
+    <Page Include="ContactDialog\CreateContactDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginDialog\LoginDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
