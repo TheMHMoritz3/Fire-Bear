@@ -16,11 +16,12 @@
             <ColumnDefinition Width="150"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox" Margin="0" Grid.Row="1"/>
-        <TreeView x:Name="treeView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" Grid.Column="1" Grid.Row="1"/>
+        <ListBox x:Name="listBox" VerticalAlignment="Stretch" Grid.Row="1" Margin="0,0,0,20"/>
+        <TreeView x:Name="treeView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1"/>
         <Widgets:ChatMessageWritingWidget VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Grid.Row="2" Grid.ColumnSpan="2" Height="20"/>
-        <Label x:Name="label" Content="User" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Messages" Grid.Column="1" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="User" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Messages" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button x:Name="_AddContactButton" Content="Add Contact" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Row="1"/>
 
     </Grid>
 </UserControl>
