@@ -1,0 +1,22 @@
+﻿<Properties StartupItem="../../src/View/LinuxClient/LinuxClient.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../src/UnitTests/LinuxTest/Data/ContactTest.cs">
+    <Files>
+      <File FileName="../../src/Model/Model/Data/MessageManager.cs" Line="1" Column="1" />
+      <File FileName="../../src/Model/Model/Manager/IConnection.cs" Line="1" Column="1" />
+      <File FileName="../../src/UnitTests/LinuxTest/Data/Test.cs" Line="1" Column="1" />
+      <File FileName="../../src/UnitTests/LinuxTest/Data/ContactTest.cs" Line="7" Column="7" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="Linux-Solution" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
