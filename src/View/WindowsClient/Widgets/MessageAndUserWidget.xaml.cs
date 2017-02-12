@@ -20,9 +20,22 @@ namespace WindowsClient.Widgets.Widgets
     /// </summary>
     public partial class MessageAndUserWidget : UserControl
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MessageAndUserWidget()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _AddContactButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
