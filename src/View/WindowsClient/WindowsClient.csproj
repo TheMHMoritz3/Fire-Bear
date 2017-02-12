@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -38,7 +38,6 @@
     <OutputPath>..\..\..\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -48,7 +47,6 @@
     <OutputPath>..\..\..\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
@@ -63,16 +61,6 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MahApps.Metro, Version=1.2.4.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
-      <HintPath>..\..\..\win32\packages\MahApps.Metro.1.2.4.0\lib\net45\MahApps.Metro.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MaterialDesignThemes.MahApps, Version=0.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\win32\packages\MaterialDesignThemes.MahApps.0.0.8\lib\net45\MaterialDesignThemes.MahApps.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Windows.Shell, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="RibbonControlsLibrary, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -100,113 +88,50 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Items\ViewSliderItem.cs" />
+    <Compile Include="LoginDialog\LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Items\ViewSliderItem.cs" />
     <Compile Include="Manager\InstanceManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
     <Compile Include="Manager\Validationrules\NotEmptyValidation.cs" />
-    <Compile Include="Widgets\CentralWidgets\AccountManagement.xaml.cs">
-      <DependentUpon>AccountManagement.xaml</DependentUpon>
+    <Compile Include="States\LoginDialog\LoginDialogState.cs" />
+    <Compile Include="Widgets\ChatMessageWritingWidget.xaml.cs">
+      <DependentUpon>ChatMessageWritingWidget.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Widgets\CentralWidgets\ChatWidget.xaml.cs">
-      <DependentUpon>ChatWidget.xaml</DependentUpon>
+    <Compile Include="Widgets\LoginDialog\LoginButtonBox.xaml.cs">
+      <DependentUpon>LoginButtonBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Widgets\CentralWidgets\OptionsWidget.xaml.cs">
-      <DependentUpon>OptionsWidget.xaml</DependentUpon>
+    <Compile Include="Widgets\MessageAndUserWidget.xaml.cs">
+      <DependentUpon>MessageAndUserWidget.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Widgets\Widgets\ChatInputWidget.xaml.cs">
-      <DependentUpon>ChatInputWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\ChatList.xaml.cs">
-      <DependentUpon>ChatList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\ServerAndUsernameWidget.xaml.cs">
-      <DependentUpon>ServerAndUsernameWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\UserControlWidget.xaml.cs">
-      <DependentUpon>UserControlWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\UserEditWidget.xaml.cs">
-      <DependentUpon>UserEditWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\UserPasswordWidget.xaml.cs">
-      <DependentUpon>UserPasswordWidget.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Widgets\Widgets\UserPictureEditor.xaml.cs">
-      <DependentUpon>UserPictureEditor.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\LoginWizard\LoginWizardPageTwo.xaml.cs">
-      <DependentUpon>LoginWizardPageTwo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\LoginWizard\LoginWizardPageOne.xaml.cs">
-      <DependentUpon>LoginWizardPageOne.xaml</DependentUpon>
-    </Compile>
+    <Page Include="LoginDialog\LoginDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Widgets\CentralWidgets\AccountManagement.xaml">
+    <Page Include="Widgets\ChatMessageWritingWidget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Widgets\CentralWidgets\ChatWidget.xaml">
+    <Page Include="Widgets\LoginDialog\LoginButtonBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Widgets\CentralWidgets\OptionsWidget.xaml">
+    <Page Include="Widgets\MessageAndUserWidget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\ChatInputWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\ChatList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\ServerAndUsernameWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\UserControlWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\UserEditWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\UserPasswordWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Widgets\Widgets\UserPictureEditor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Wizards\LoginWizard.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Wizards\LoginWizard.xaml.cs">
-      <DependentUpon>LoginWizard.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Wizards\LoginWizard\LoginWizardPageTwo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Wizards\LoginWizard\LoginWizardPageOne.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -238,24 +163,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\christoph-szüts-foto.256x256.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Widgets\Widgets\Eventhandler\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\..\Model\ClientModel\ClientModel.csproj">
+      <Project>{dbf7e81b-5bc7-4d86-9628-a824980115b9}</Project>
+      <Name>ClientModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Model\Model\Model.csproj">
       <Project>{99c600c9-d31f-45c9-9e09-55059af65da1}</Project>
       <Name>Model</Name>

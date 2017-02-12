@@ -4,14 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsClient"
-        xmlns:CentralWidgets="clr-namespace:WindowsClient.Widgets.CentralWidgets" xmlns:Manager="clr-namespace:WindowsClient.Manager" x:Class="WindowsClient.MainWindow"
+        xmlns:Widgets="clr-namespace:WindowsClient.Widgets.Widgets" x:Class="WindowsClient.MainWindow"
         mc:Ignorable="d"
-        Title="XMPP-Chat" Height="720" Width="1280"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal"
-        TextOptions.TextRenderingMode="Auto">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="461" Width="849">
+    <DockPanel>
+        <Menu x:Name="MainMenu" HorizontalAlignment="Stretch" DockPanel.Dock="Top" >
+            <MenuItem Header="File" >
+                <MenuItem Header="Login" HorizontalAlignment="Right" Width="140" Click="MenuItem_LoginClick"/>
+                <MenuItem Header="Logout" HorizontalAlignment="Right" Width="140"/>
+                <Separator/>
+                <MenuItem Header="Close" HorizontalAlignment="Right" Width="140" Click="MenuItem_CloseClick"/>
+            </MenuItem>
+            <MenuItem Header="Options">
+                <MenuItem Header="Server-Options"/>
+                <MenuItem Header="Client-Options"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="Help"/>
+                <Separator />
+                <MenuItem Header="Licence"/>
+                <MenuItem Header="Contribution"/>
+            </MenuItem>
+        </Menu>
+        <Widgets:MessageAndUserWidget HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" />
+    </DockPanel>
 </Window>

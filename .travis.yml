@@ -1,0 +1,5 @@
+language: csharp
+solution: ./win32/Linux-Solution/Linux-Solution.sln
+install:
+  - sudo apt-get install -y gtk-sharp2
+  - nuget restore ./win32/Linux-Solution/Linux-Solution.sln

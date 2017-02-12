@@ -14,7 +14,7 @@ namespace Model.Manager.States
             bufferSize = 256;
         }
         /// <summary>
-        /// Property des Client Sockets
+        /// Property of the client sockets
         /// </summary>
         public Socket WorkSocket
         {
@@ -28,7 +28,7 @@ namespace Model.Manager.States
             }
         }
         /// <summary>
-        /// Größe des RecivingBuffers
+        /// Size of the RecivingBuffers
         /// </summary>
         public int BufferSize
         {
