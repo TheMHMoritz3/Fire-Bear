@@ -32,15 +32,19 @@ namespace LinuxClient
 		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
 		
-		private global::Gtk.TreeView treeview1;
+		private global::Gtk.TreeView treeview3;
 		
-		private global::Gtk.Label GtkLabel2;
+		private global::Gtk.Label GtkLabel3;
 		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow1;
 		
 		private global::Gtk.TreeView treeview2;
 		
 		private global::Gtk.Statusbar statusbar2;
+		
+		private global::Gtk.Label _StatusLabel;
+		
+		private global::Gtk.ProgressBar _ProgressBar;
 
 		protected virtual void Build ()
 		{
@@ -104,17 +108,17 @@ namespace LinuxClient
 			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
 			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
-			this.treeview1 = new global::Gtk.TreeView ();
-			this.treeview1.CanFocus = true;
-			this.treeview1.Name = "treeview1";
-			this.GtkScrolledWindow.Add (this.treeview1);
+			this.treeview3 = new global::Gtk.TreeView ();
+			this.treeview3.CanFocus = true;
+			this.treeview3.Name = "treeview3";
+			this.GtkScrolledWindow.Add (this.treeview3);
 			this.GtkAlignment.Add (this.GtkScrolledWindow);
 			this.frame1.Add (this.GtkAlignment);
-			this.GtkLabel2 = new global::Gtk.Label ();
-			this.GtkLabel2.Name = "GtkLabel2";
-			this.GtkLabel2.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>User</b>");
-			this.GtkLabel2.UseMarkup = true;
-			this.frame1.LabelWidget = this.GtkLabel2;
+			this.GtkLabel3 = new global::Gtk.Label ();
+			this.GtkLabel3.Name = "GtkLabel3";
+			this.GtkLabel3.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>User</b>");
+			this.GtkLabel3.UseMarkup = true;
+			this.frame1.LabelWidget = this.GtkLabel3;
 			this.hbox3.Add (this.frame1);
 			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.frame1]));
 			w6.Position = 0;
@@ -139,11 +143,26 @@ namespace LinuxClient
 			this.statusbar2 = new global::Gtk.Statusbar ();
 			this.statusbar2.Name = "statusbar2";
 			this.statusbar2.Spacing = 6;
-			this.vbox2.Add (this.statusbar2);
-			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.statusbar2]));
-			w10.Position = 2;
+			// Container child statusbar2.Gtk.Box+BoxChild
+			this._StatusLabel = new global::Gtk.Label ();
+			this._StatusLabel.Name = "_StatusLabel";
+			this._StatusLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("label1");
+			this.statusbar2.Add (this._StatusLabel);
+			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.statusbar2 [this._StatusLabel]));
+			w10.Position = 1;
 			w10.Expand = false;
 			w10.Fill = false;
+			// Container child statusbar2.Gtk.Box+BoxChild
+			this._ProgressBar = new global::Gtk.ProgressBar ();
+			this._ProgressBar.Name = "_ProgressBar";
+			this.statusbar2.Add (this._ProgressBar);
+			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.statusbar2 [this._ProgressBar]));
+			w11.Position = 2;
+			this.vbox2.Add (this.statusbar2);
+			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.statusbar2]));
+			w12.Position = 2;
+			w12.Expand = false;
+			w12.Fill = false;
 			this.Add (this.vbox2);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
