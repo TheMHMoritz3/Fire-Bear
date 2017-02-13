@@ -35,7 +35,9 @@ namespace WindowsClient.Widgets.Widgets
         /// <param name="e"></param>
         private void _AddContactButton_Click(object sender, RoutedEventArgs e)
         {
-
+            AddButtonClicked(sender, e);
         }
+
+        public event EventHandler AddButtonClicked;
     }
 }

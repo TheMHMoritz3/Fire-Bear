@@ -21,7 +21,7 @@
         <Widgets:ChatMessageWritingWidget VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Grid.Row="2" Grid.ColumnSpan="2" Height="20"/>
         <Label x:Name="label" Content="User" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Messages" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Button x:Name="_AddContactButton" Content="Add Contact" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Row="1" Click="_AddContactButton_Click"/>
+        <Button x:Name="_AddContactButton" Content="Add" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Row="1" Click="_AddContactButton_Click"/>
 
     </Grid>
 </UserControl>

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Model.Manager.States;
 using Model.Data;
+using WindowsClient.ContactDialog;
 
 namespace WindowsClient
 {
@@ -27,6 +28,26 @@ namespace WindowsClient
         public MainWindow()
         {
             InitializeComponent();
+            connectAddUserButton();
+        }
+
+        /// <summary>
+        /// Connects the Button AddUser with the Method
+        /// </summary>
+        private void connectAddUserButton()
+        {
+            _MessagesAndUserWidget.AddButtonClicked += onAddUserButtonClicked;
+        }
+
+        /// <summary>
+        /// Is trigged if AddUser Button is Pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void onAddUserButtonClicked(object sender, EventArgs e)
+        {
+            CreateContactDialog LoginDialog = new CreateContactDialog();
+            LoginDialog.ShowDialog();
         }
 
         /// <summary>

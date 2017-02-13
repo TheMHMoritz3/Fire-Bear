@@ -26,6 +26,6 @@
                 <MenuItem x:Name="_ContributionAction" Header="Contribution"/>
             </MenuItem>
         </Menu>
-        <Widgets:MessageAndUserWidget HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" />
+        <Widgets:MessageAndUserWidget x:Name="_MessagesAndUserWidget" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" />
     </DockPanel>
 </Window>
