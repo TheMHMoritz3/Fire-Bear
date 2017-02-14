@@ -94,7 +94,7 @@ namespace WindowsClient.LoginDialog
         /// <returns>Generated Login Data</returns>
         public LoginData getLogin()
         {
-            LoginData returnValue = new LoginData(SecureStringConverter.convertFromString(_UsernameTextBox.Text), _UserPasswordBox.SecurePassword, _DomainTextBox.Text);
+            LoginData returnValue = new LoginData(_UsernameTextBox.Text, _UserPasswordBox.SecurePassword, _DomainTextBox.Text);
             return returnValue;
         }
 
