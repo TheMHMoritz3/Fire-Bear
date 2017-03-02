@@ -47,6 +47,7 @@
     <Compile Include="Data\XML\XMLElement.cs" />
     <Compile Include="Data\XML\XMLParser.cs" />
     <Compile Include="Enumeration\EncodingTypes.cs" />
+    <Compile Include="Manager\IConfiguration.cs" />
     <Compile Include="Manager\IConnection.cs" />
     <Compile Include="Manager\IInstanceManager.cs" />
     <Compile Include="Manager\States\IState.cs" />
