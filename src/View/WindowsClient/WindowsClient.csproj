@@ -102,10 +102,13 @@
     </Compile>
     <Compile Include="Manager\InstanceManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
-    <Compile Include="Manager\Validationrules\NotEmptyValidation.cs" />
+    <Compile Include="States\ConatactDialog\ContactDialogState.cs" />
     <Compile Include="States\LoginDialog\LoginDialogState.cs" />
     <Compile Include="Widgets\ChatMessageWritingWidget.xaml.cs">
       <DependentUpon>ChatMessageWritingWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\ContactDialog\ContactDialogButtonBox.xaml.cs">
+      <DependentUpon>ContactDialogButtonBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Widgets\LoginDialog\LoginButtonBox.xaml.cs">
       <DependentUpon>LoginButtonBox.xaml</DependentUpon>
@@ -126,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Widgets\ChatMessageWritingWidget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Widgets\ContactDialog\ContactDialogButtonBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -181,6 +188,7 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -50,6 +50,7 @@
     <Compile Include="Manager\IInstanceManager.cs" />
     <Compile Include="Manager\States\IState.cs" />
     <Compile Include="Manager\States\StateObject.cs" />
+    <Compile Include="ModelNamespace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
