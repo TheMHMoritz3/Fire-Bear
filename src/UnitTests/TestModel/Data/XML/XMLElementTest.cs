@@ -13,14 +13,14 @@ namespace TestModel.Data.XML
     public class XMLElementTest
     {
         [Test]
-        public void SimpleConstructorTest()
+        public void testSimpleConstructor()
         {
             XMLElement element = new XMLElement();
             Assert.That(element.XMLTag, Is.EqualTo(""));
         }
 
         [Test]
-        public void XMLTagTest()
+        public void testXMLTag()
         {
             XMLElement element = new XMLElement();
             element.XMLTag = "Test";
@@ -28,7 +28,7 @@ namespace TestModel.Data.XML
         }
 
         [Test]
-        public void SimpleXMLElementsTest()
+        public void testSimpleXMLElements()
         {
             XMLElement element = new XMLElement();
             element.Add("TestOne", "Test");
@@ -36,7 +36,7 @@ namespace TestModel.Data.XML
         }
 
         [Test]
-        public void ExtentedXMLElementsTest()
+        public void testExtentedXMLElements()
         {
             XMLElement element = new XMLElement();
             element.Add("TestOne", "Test");

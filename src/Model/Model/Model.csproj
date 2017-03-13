@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Model</RootNamespace>
     <AssemblyName>Model</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Data\Contact.cs" />
     <Compile Include="Data\LoginData.cs" />
-    <Compile Include="Data\MessageManager.cs" />
     <Compile Include="Data\Security\SecureStringConverter.cs" />
     <Compile Include="Data\XML\XMLElement.cs" />
     <Compile Include="Data\XML\XMLParser.cs" />
@@ -52,6 +51,7 @@
     <Compile Include="Manager\IInstanceManager.cs" />
     <Compile Include="Manager\States\IState.cs" />
     <Compile Include="Manager\States\StateObject.cs" />
+    <Compile Include="ModelNamespace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

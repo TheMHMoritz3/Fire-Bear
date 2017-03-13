@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WindowsClient</RootNamespace>
     <AssemblyName>WindowsClient</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -29,6 +29,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -64,6 +65,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\win32\packages\MahApps.Metro.1.2.4.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -88,6 +90,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ContactDialog\CreateContactDialog.xaml.cs">
+      <DependentUpon>CreateContactDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Items\ViewSliderItem.cs" />
     <Compile Include="LoginDialog\LoginDialog.xaml.cs">
       <DependentUpon>LoginDialog.xaml</DependentUpon>
@@ -97,10 +102,13 @@
     </Compile>
     <Compile Include="Manager\InstanceManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
-    <Compile Include="Manager\Validationrules\NotEmptyValidation.cs" />
+    <Compile Include="States\ConatactDialog\ContactDialogState.cs" />
     <Compile Include="States\LoginDialog\LoginDialogState.cs" />
     <Compile Include="Widgets\ChatMessageWritingWidget.xaml.cs">
       <DependentUpon>ChatMessageWritingWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\ContactDialog\ContactDialogButtonBox.xaml.cs">
+      <DependentUpon>ContactDialogButtonBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Widgets\LoginDialog\LoginButtonBox.xaml.cs">
       <DependentUpon>LoginButtonBox.xaml</DependentUpon>
@@ -108,6 +116,10 @@
     <Compile Include="Widgets\MessageAndUserWidget.xaml.cs">
       <DependentUpon>MessageAndUserWidget.xaml</DependentUpon>
     </Compile>
+    <Page Include="ContactDialog\CreateContactDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginDialog\LoginDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -117,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Widgets\ChatMessageWritingWidget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Widgets\ContactDialog\ContactDialogButtonBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,7 +164,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -171,6 +187,18 @@
       <Project>{99c600c9-d31f-45c9-9e09-55059af65da1}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contacts-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twitter-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

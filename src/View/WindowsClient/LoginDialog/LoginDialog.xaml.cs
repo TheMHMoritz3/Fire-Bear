@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WindowsClient.States.LoginDialog;
+using Model.Data;
+using Model.Data.Security;
+using Model.Manager.States;
 
 namespace WindowsClient.LoginDialog
 {
@@ -51,6 +54,7 @@ namespace WindowsClient.LoginDialog
         private void onCloseClicked(object sender, EventArgs e)
         {
             _StateManager.setStaus(LoginDialogState.LoginDialogStates.Canceled);
+            Close();
         }
 
         /// <summary>
@@ -58,17 +62,49 @@ namespace WindowsClient.LoginDialog
         /// </summary>
         private void connectEventsWithWindow()
         {
-
+            _ButtonBox.CancelClicked += onCancelClicked;
+            _ButtonBox.LoginClicked += onLoginClicked;
         }
 
+        /// <summary>
+        /// Is Called if Cancel is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void onCancelClicked(object sender, EventArgs e)
         {
-
+            _StateManager.setStaus(LoginDialogState.LoginDialogStates.Canceled);
+            Close();
         }
 
+        /// <summary>
+        /// Is Called if Login is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void onLoginClicked(object sender, EventArgs e)
         {
+            _StateManager.setStaus(LoginDialogState.LoginDialogStates.Accepted);
+            Close();
+        }
 
+        /// <summary>
+        /// Generates LoginData
+        /// </summary>
+        /// <returns>Generated Login Data</returns>
+        public LoginData getLogin()
+        {
+            LoginData returnValue = new LoginData(_UsernameTextBox.Text, _UserPasswordBox.SecurePassword, _DomainTextBox.Text);
+            return returnValue;
+        }
+
+        /// <summary>
+        /// Retruns Status that there is a Possible check, before getting an Exception at getLogin()
+        /// </summary>
+        /// <returns>Status-Manager</returns>
+        public IState getStatusManager()
+        {
+            return _StateManager;
         }
     }
 }

@@ -14,21 +14,21 @@ namespace TestModel.Manager.States
     public class StateObjectTest
     {
         [Test]
-        public void BufferSizePropertyTest()
+        public void testBufferSizeProperty()
         {
             StateObject testobject = new StateObject();
             Assert.IsTrue(testobject.BufferSize==256);
         }
 
         [Test]
-        public void StringBuilderPropertyTest()
+        public void testStringBuilderProperty()
         {
             StateObject testobject = new StateObject();
             Assert.IsTrue(testobject.SB!=null);
         }
 
         [Test]
-        public void WorkSocketPropertyTest()
+        public void testWorkSocketProperty()
         {
             StateObject testobject = new StateObject();
             Assert.IsTrue(testobject.WorkSocket==null);

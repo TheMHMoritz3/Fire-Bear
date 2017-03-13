@@ -6,6 +6,20 @@ namespace LinuxClient
 	{
 		private global::Gtk.UIManager UIManager;
 		
+		private global::Gtk.Action FileAction;
+		
+		private global::Gtk.Action LoginAction;
+		
+		private global::Gtk.Action LogoutAction;
+		
+		private global::Gtk.Action OptionsAction;
+		
+		private global::Gtk.Action ServerOptionsAction;
+		
+		private global::Gtk.Action ClientOptionsAction;
+		
+		private global::Gtk.Action HelpAction;
+		
 		private global::Gtk.VBox vbox2;
 		
 		private global::Gtk.MenuBar menubar3;
@@ -16,9 +30,21 @@ namespace LinuxClient
 		
 		private global::Gtk.Alignment GtkAlignment;
 		
-		private global::Gtk.Label GtkLabel2;
+		private global::Gtk.ScrolledWindow GtkScrolledWindow;
+		
+		private global::Gtk.TreeView treeview3;
+		
+		private global::Gtk.Label GtkLabel3;
+		
+		private global::Gtk.ScrolledWindow GtkScrolledWindow1;
+		
+		private global::Gtk.TreeView treeview2;
 		
 		private global::Gtk.Statusbar statusbar2;
+		
+		private global::Gtk.Label _StatusLabel;
+		
+		private global::Gtk.ProgressBar _ProgressBar;
 
 		protected virtual void Build ()
 		{
@@ -26,6 +52,27 @@ namespace LinuxClient
 			// Widget LinuxClient.MainWindow
 			this.UIManager = new global::Gtk.UIManager ();
 			global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup ("Default");
+			this.FileAction = new global::Gtk.Action ("FileAction", global::Mono.Unix.Catalog.GetString ("File"), null, null);
+			this.FileAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("File");
+			w1.Add (this.FileAction, null);
+			this.LoginAction = new global::Gtk.Action ("LoginAction", global::Mono.Unix.Catalog.GetString ("Login"), null, null);
+			this.LoginAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Login");
+			w1.Add (this.LoginAction, null);
+			this.LogoutAction = new global::Gtk.Action ("LogoutAction", global::Mono.Unix.Catalog.GetString ("Logout"), null, null);
+			this.LogoutAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Logout");
+			w1.Add (this.LogoutAction, null);
+			this.OptionsAction = new global::Gtk.Action ("OptionsAction", global::Mono.Unix.Catalog.GetString ("Options"), null, null);
+			this.OptionsAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Options");
+			w1.Add (this.OptionsAction, null);
+			this.ServerOptionsAction = new global::Gtk.Action ("ServerOptionsAction", global::Mono.Unix.Catalog.GetString ("Server-Options"), null, null);
+			this.ServerOptionsAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Server-Options");
+			w1.Add (this.ServerOptionsAction, null);
+			this.ClientOptionsAction = new global::Gtk.Action ("ClientOptionsAction", global::Mono.Unix.Catalog.GetString ("Client-Options"), null, null);
+			this.ClientOptionsAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Client-Options");
+			w1.Add (this.ClientOptionsAction, null);
+			this.HelpAction = new global::Gtk.Action ("HelpAction", global::Mono.Unix.Catalog.GetString ("Help"), null, null);
+			this.HelpAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Help");
+			w1.Add (this.HelpAction, null);
 			this.UIManager.InsertActionGroup (w1, 0);
 			this.AddAccelGroup (this.UIManager.AccelGroup);
 			this.Name = "LinuxClient.MainWindow";
@@ -36,7 +83,7 @@ namespace LinuxClient
 			this.vbox2.Name = "vbox2";
 			this.vbox2.Spacing = 6;
 			// Container child vbox2.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><menubar name='menubar3'/></ui>");
+			this.UIManager.AddUiFromString ("<ui><menubar name='menubar3'><menu name='FileAction' action='FileAction'><menuitem name='LoginAction' action='LoginAction'/><menuitem name='LogoutAction' action='LogoutAction'/></menu><menu name='OptionsAction' action='OptionsAction'><menuitem name='ServerOptionsAction' action='ServerOptionsAction'/><menuitem name='ClientOptionsAction' action='ClientOptionsAction'/></menu><menu name='HelpAction' action='HelpAction'/></menubar></ui>");
 			this.menubar3 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menubar3")));
 			this.menubar3.Name = "menubar3";
 			this.vbox2.Add (this.menubar3);
@@ -56,29 +103,66 @@ namespace LinuxClient
 			this.GtkAlignment = new global::Gtk.Alignment (0F, 0F, 1F, 1F);
 			this.GtkAlignment.Name = "GtkAlignment";
 			this.GtkAlignment.LeftPadding = ((uint)(12));
+			// Container child GtkAlignment.Gtk.Container+ContainerChild
+			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
+			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
+			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
+			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
+			this.treeview3 = new global::Gtk.TreeView ();
+			this.treeview3.CanFocus = true;
+			this.treeview3.Name = "treeview3";
+			this.GtkScrolledWindow.Add (this.treeview3);
+			this.GtkAlignment.Add (this.GtkScrolledWindow);
 			this.frame1.Add (this.GtkAlignment);
-			this.GtkLabel2 = new global::Gtk.Label ();
-			this.GtkLabel2.Name = "GtkLabel2";
-			this.GtkLabel2.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>User</b>");
-			this.GtkLabel2.UseMarkup = true;
-			this.frame1.LabelWidget = this.GtkLabel2;
+			this.GtkLabel3 = new global::Gtk.Label ();
+			this.GtkLabel3.Name = "GtkLabel3";
+			this.GtkLabel3.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>User</b>");
+			this.GtkLabel3.UseMarkup = true;
+			this.frame1.LabelWidget = this.GtkLabel3;
 			this.hbox3.Add (this.frame1);
-			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.frame1]));
-			w4.Position = 0;
-			w4.Expand = false;
-			w4.Fill = false;
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.frame1]));
+			w6.Position = 0;
+			w6.Expand = false;
+			w6.Fill = false;
+			// Container child hbox3.Gtk.Box+BoxChild
+			this.GtkScrolledWindow1 = new global::Gtk.ScrolledWindow ();
+			this.GtkScrolledWindow1.Name = "GtkScrolledWindow1";
+			this.GtkScrolledWindow1.ShadowType = ((global::Gtk.ShadowType)(1));
+			// Container child GtkScrolledWindow1.Gtk.Container+ContainerChild
+			this.treeview2 = new global::Gtk.TreeView ();
+			this.treeview2.CanFocus = true;
+			this.treeview2.Name = "treeview2";
+			this.GtkScrolledWindow1.Add (this.treeview2);
+			this.hbox3.Add (this.GtkScrolledWindow1);
+			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.GtkScrolledWindow1]));
+			w8.Position = 1;
 			this.vbox2.Add (this.hbox3);
-			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox3]));
-			w5.Position = 1;
+			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox3]));
+			w9.Position = 1;
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.statusbar2 = new global::Gtk.Statusbar ();
 			this.statusbar2.Name = "statusbar2";
 			this.statusbar2.Spacing = 6;
+			// Container child statusbar2.Gtk.Box+BoxChild
+			this._StatusLabel = new global::Gtk.Label ();
+			this._StatusLabel.Name = "_StatusLabel";
+			this._StatusLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("label1");
+			this.statusbar2.Add (this._StatusLabel);
+			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.statusbar2 [this._StatusLabel]));
+			w10.Position = 1;
+			w10.Expand = false;
+			w10.Fill = false;
+			// Container child statusbar2.Gtk.Box+BoxChild
+			this._ProgressBar = new global::Gtk.ProgressBar ();
+			this._ProgressBar.Name = "_ProgressBar";
+			this.statusbar2.Add (this._ProgressBar);
+			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.statusbar2 [this._ProgressBar]));
+			w11.Position = 2;
 			this.vbox2.Add (this.statusbar2);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.statusbar2]));
-			w6.Position = 2;
-			w6.Expand = false;
-			w6.Fill = false;
+			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.statusbar2]));
+			w12.Position = 2;
+			w12.Expand = false;
+			w12.Fill = false;
 			this.Add (this.vbox2);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();

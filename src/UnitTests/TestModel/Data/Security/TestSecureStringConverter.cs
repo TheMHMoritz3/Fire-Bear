@@ -15,14 +15,14 @@ namespace TestModel.Data.Security
     public class TestSecureStringConverter
     {
         [Test]
-        public void ConvertToSecureStringBasicTest()
+        public void testConvertToSecureStringBasic()
         {
             SecureString securedString = SecureStringConverter.convertFromString("test");
             Assert.AreEqual("test", Marshal.PtrToStringUni(Marshal.SecureStringToCoTaskMemUnicode(securedString)));
         }
 
         [Test]
-        public void ConvertToSecureStringEmptyStringTest()
+        public void testConvertToSecureStringEmptyString()
         {
             SecureString securedString = SecureStringConverter.convertFromString("");
             Assert.AreEqual("", Marshal.PtrToStringUni(Marshal.SecureStringToCoTaskMemUnicode(securedString)));

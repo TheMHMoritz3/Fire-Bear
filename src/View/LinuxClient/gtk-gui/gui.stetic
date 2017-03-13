@@ -6,10 +6,46 @@
   </configuration>
   <import>
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <widget-library name="../bin/Debug/LinuxClient.exe" internal="true" />
+    <widget-library name="../../../../bin/LinuxClient.exe" internal="true" />
   </import>
   <widget class="Gtk.Window" id="LinuxClient.MainWindow" design-size="1029 479">
-    <action-group name="Default" />
+    <action-group name="Default">
+      <action id="FileAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">File</property>
+        <property name="ShortLabel" translatable="yes">File</property>
+      </action>
+      <action id="LoginAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Login</property>
+        <property name="ShortLabel" translatable="yes">Login</property>
+      </action>
+      <action id="LogoutAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Logout</property>
+        <property name="ShortLabel" translatable="yes">Logout</property>
+      </action>
+      <action id="OptionsAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Options</property>
+        <property name="ShortLabel" translatable="yes">Options</property>
+      </action>
+      <action id="ServerOptionsAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Server-Options</property>
+        <property name="ShortLabel" translatable="yes">Server-Options</property>
+      </action>
+      <action id="ClientOptionsAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Client-Options</property>
+        <property name="ShortLabel" translatable="yes">Client-Options</property>
+      </action>
+      <action id="HelpAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Help</property>
+        <property name="ShortLabel" translatable="yes">Help</property>
+      </action>
+    </action-group>
     <property name="MemberName" />
     <property name="Title" translatable="yes">Fire Bear</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -20,7 +56,17 @@
         <child>
           <widget class="Gtk.MenuBar" id="menubar3">
             <property name="MemberName" />
-            <node name="__gtksharp_195_Stetic_Editor_ActionMenuBar" type="Menubar" />
+            <node name="__gtksharp_195_Stetic_Editor_ActionMenuBar" type="Menubar">
+              <node type="Menu" action="FileAction">
+                <node type="Menuitem" action="LoginAction" />
+                <node type="Menuitem" action="LogoutAction" />
+              </node>
+              <node type="Menu" action="OptionsAction">
+                <node type="Menuitem" action="ServerOptionsAction" />
+                <node type="Menuitem" action="ClientOptionsAction" />
+              </node>
+              <node type="Menu" action="HelpAction" />
+            </node>
           </widget>
           <packing>
             <property name="Position">0</property>
@@ -44,12 +90,22 @@
                     <property name="Yalign">0</property>
                     <property name="LeftPadding">12</property>
                     <child>
-                      <placeholder />
+                      <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+                        <property name="MemberName" />
+                        <property name="ShadowType">In</property>
+                        <child>
+                          <widget class="Gtk.TreeView" id="treeview3">
+                            <property name="MemberName" />
+                            <property name="CanFocus">True</property>
+                            <property name="ShowScrollbars">True</property>
+                          </widget>
+                        </child>
+                      </widget>
                     </child>
                   </widget>
                 </child>
                 <child>
-                  <widget class="Gtk.Label" id="GtkLabel2">
+                  <widget class="Gtk.Label" id="GtkLabel3">
                     <property name="MemberName" />
                     <property name="LabelProp" translatable="yes">&lt;b&gt;User&lt;/b&gt;</property>
                     <property name="UseMarkup">True</property>
@@ -67,10 +123,21 @@
               </packing>
             </child>
             <child>
-              <placeholder />
-            </child>
-            <child>
-              <placeholder />
+              <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow1">
+                <property name="MemberName" />
+                <property name="ShadowType">In</property>
+                <child>
+                  <widget class="Gtk.TreeView" id="treeview2">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="ShowScrollbars">True</property>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
+              </packing>
             </child>
           </widget>
           <packing>
@@ -83,10 +150,25 @@
             <property name="MemberName" />
             <property name="Spacing">6</property>
             <child>
-              <placeholder />
+              <widget class="Gtk.Label" id="_StatusLabel">
+                <property name="MemberName" />
+                <property name="LabelProp" translatable="yes">label1</property>
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
             </child>
             <child>
-              <placeholder />
+              <widget class="Gtk.ProgressBar" id="_ProgressBar">
+                <property name="MemberName" />
+              </widget>
+              <packing>
+                <property name="Position">2</property>
+                <property name="AutoSize">True</property>
+              </packing>
             </child>
           </widget>
           <packing>

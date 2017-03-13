@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsClient.ContactDialog"
+        xmlns:ContactDialog="clr-namespace:WindowsClient.Widgets.ContactDialog" x:Class="WindowsClient.ContactDialog.CreateContactDialog"
+        mc:Ignorable="d"
+        Title="CreateContactDialog" Height="150" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" HorizontalAlignment="Left" Margin="27,20,0,0" VerticalAlignment="Top" Height="10" Width="10"/>
+        <Label x:Name="label1" Content="Username" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="_UsernameTextbox" Grid.Column="1" HorizontalAlignment="Stretch" Height="23" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <Label x:Name="label2" Content="Domain" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
+        <ComboBox x:Name="_UserTypeCombobox" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Center" >
+            <ComboBoxItem Content="User" IsSelected="True"/>
+            <ComboBoxItem Content="Group"/>
+        </ComboBox>
+        <TextBox x:Name="_DomainTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Height="23" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" />
+        <ContactDialog:ContactDialogButtonBox Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Grid.Row="3" VerticalAlignment="Stretch" AddClicked="onAddClicked" CancelClicked="onCancelClicked"/>
+    </Grid>
+</Window>

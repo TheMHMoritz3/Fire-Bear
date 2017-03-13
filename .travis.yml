@@ -1,5 +1,10 @@
 language: csharp
-solution: ./win32/Linux-Solution/Linux-Solution.sln
+solution: ./win32/Linux-Solution.sln
 install:
   - sudo apt-get install -y gtk-sharp2
-  - nuget restore ./win32/Linux-Solution/Linux-Solution.sln
+  - nuget restore ./win32/Linux-Solution.sln
+  - nuget install NUnit -Version 2.6.4
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release ./win32/Linux-Solution.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./bin/TestModel.dll

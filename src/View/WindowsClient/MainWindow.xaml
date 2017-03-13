@@ -7,25 +7,31 @@
         xmlns:Widgets="clr-namespace:WindowsClient.Widgets.Widgets" x:Class="WindowsClient.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="461" Width="849">
+    <Window.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </Window.Resources>
     <DockPanel>
-        <Menu x:Name="MainMenu" HorizontalAlignment="Stretch" DockPanel.Dock="Top" >
+        <Menu x:Name="_MainMenu" HorizontalAlignment="Stretch" DockPanel.Dock="Top" >
             <MenuItem Header="File" >
-                <MenuItem Header="Login" HorizontalAlignment="Right" Width="140" Click="MenuItem_LoginClick"/>
-                <MenuItem Header="Logout" HorizontalAlignment="Right" Width="140"/>
+                <MenuItem x:Name="_LoginAction" Header="Login" HorizontalAlignment="Right" Width="140" Click="MenuItem_LoginClick"/>
+                <MenuItem x:Name="_LogoutAction" Header="Logout" HorizontalAlignment="Right" Width="140"/>
                 <Separator/>
-                <MenuItem Header="Close" HorizontalAlignment="Right" Width="140" Click="MenuItem_CloseClick"/>
+                <MenuItem x:Name="_CloseAction" Header="Close" HorizontalAlignment="Right" Width="140" Click="MenuItem_CloseClick"/>
             </MenuItem>
             <MenuItem Header="Options">
-                <MenuItem Header="Server-Options"/>
-                <MenuItem Header="Client-Options"/>
+                <MenuItem x:Name="_ServerOptionsAction" Header="Server-Options"/>
+                <MenuItem x:Name="_ClientOptionsAction" Header="Client-Options"/>
             </MenuItem>
             <MenuItem Header="Help">
-                <MenuItem Header="Help"/>
+                <MenuItem x:Name="_HelpAction" Header="Help"/>
                 <Separator />
-                <MenuItem Header="Licence"/>
-                <MenuItem Header="Contribution"/>
+                <MenuItem x:Name="_LicenceAction" Header="Licence"/>
+                <MenuItem x:Name="_ContributionAction" Header="Contribution"/>
+                <MenuItem x:Name="_ThirdPartyAction" Header="Thrird Party"/>
+                <MenuItem x:Name="_TwitterAction" Header="Twitter The_MHMoritz3"/>
             </MenuItem>
         </Menu>
-        <Widgets:MessageAndUserWidget HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" />
+        <Widgets:MessageAndUserWidget x:Name="_MessagesAndUserWidget" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" />
     </DockPanel>
 </Window>

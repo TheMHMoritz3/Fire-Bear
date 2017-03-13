@@ -178,10 +178,7 @@ namespace Model.Manager
                     state.SB.Append(Encoding.ASCII.GetString(state.Buffer, 0, bytesRead));
                     if (state.SB.Length > 1)
                     {
-                        Monitor.Enter(ResultManager);
-                        //ResultManager.reciveXmlMessage(state.SB.ToString());
                         Trace.Write(state.SB.ToString());
-                        Monitor.Exit(ResultManager);
                     }
                     // Signal that all bytes have been received.
                     ReciveDone.Set();
@@ -193,10 +190,10 @@ namespace Model.Manager
                     // All the data has arrived; put it in response.
                     if (state.SB.Length > 1)
                     {
-                        Monitor.Enter(ResultManager);
-                        ResultManager.reciveXmlMessage(state.SB.ToString());
+                        //Monitor.Enter(ResultManager);
+                        //ResultManager.reciveXmlMessage(state.SB.ToString());
                         Trace.Write(state.SB.ToString());
-                        Monitor.Exit(ResultManager);
+                        //Monitor.Exit(ResultManager);
                     }
                     // Signal that all bytes have been received.
                     ReciveDone.Set();
@@ -211,7 +208,7 @@ namespace Model.Manager
         /// Is triggered if Message is Recived
         /// </summary>
         //public event EventHandler RecivedMessage;
-        private static MessageManager ResultManager = new MessageManager();
+        //private static MessageManager ResultManager = new MessageManager();
         private static ManualResetEvent ConnectDone = new ManualResetEvent(false);
         private static ManualResetEvent SendDone = new ManualResetEvent(false);
         private static ManualResetEvent ReciveDone = new ManualResetEvent(false);
