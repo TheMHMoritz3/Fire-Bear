@@ -1,4 +1,4 @@
-version: 17.02.{build}
+version: 17.03.{build}
 install:
 - cmd: nuget restore ./win32/Windows-Client.sln
 build:
