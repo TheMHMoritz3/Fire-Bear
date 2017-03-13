@@ -16,6 +16,7 @@ namespace LinuxClient
 		}
 
 
+
 		Gtk.TreeView UserView;
 	}
 }

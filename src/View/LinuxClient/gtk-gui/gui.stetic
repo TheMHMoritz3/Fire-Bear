@@ -45,6 +45,31 @@
         <property name="Label" translatable="yes">Help</property>
         <property name="ShortLabel" translatable="yes">Help</property>
       </action>
+      <action id="HelpAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Help</property>
+        <property name="ShortLabel" translatable="yes">Help</property>
+      </action>
+      <action id="LicenceAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Licence</property>
+        <property name="ShortLabel" translatable="yes">Licence</property>
+      </action>
+      <action id="ContributionAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Contribution</property>
+        <property name="ShortLabel" translatable="yes">Contribution</property>
+      </action>
+      <action id="ThirdPartyAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Third Party</property>
+        <property name="ShortLabel" translatable="yes">Third Party</property>
+      </action>
+      <action id="TwitterTheMHMoritz3Action">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Twitter TheMHMoritz3</property>
+        <property name="ShortLabel" translatable="yes">Twitter TheMHMoritz3</property>
+      </action>
     </action-group>
     <property name="MemberName" />
     <property name="Title" translatable="yes">Fire Bear</property>
@@ -65,7 +90,14 @@
                 <node type="Menuitem" action="ServerOptionsAction" />
                 <node type="Menuitem" action="ClientOptionsAction" />
               </node>
-              <node type="Menu" action="HelpAction" />
+              <node type="Menu" action="HelpAction">
+                <node type="Menuitem" action="HelpAction1" />
+                <node type="Separator" />
+                <node type="Menuitem" action="LicenceAction" />
+                <node type="Menuitem" action="ContributionAction" />
+                <node type="Menuitem" action="ThirdPartyAction" />
+                <node type="Menuitem" action="TwitterTheMHMoritz3Action" />
+              </node>
             </node>
           </widget>
           <packing>
@@ -76,9 +108,10 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.HBox" id="hbox3">
+          <widget class="Gtk.HPaned" id="hpaned1">
             <property name="MemberName" />
-            <property name="Spacing">6</property>
+            <property name="CanFocus">True</property>
+            <property name="Position">166</property>
             <child>
               <widget class="Gtk.Frame" id="frame1">
                 <property name="MemberName" />
@@ -90,24 +123,49 @@
                     <property name="Yalign">0</property>
                     <property name="LeftPadding">12</property>
                     <child>
-                      <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+                      <widget class="Gtk.VBox" id="vbox5">
                         <property name="MemberName" />
-                        <property name="ShadowType">In</property>
+                        <property name="Spacing">6</property>
                         <child>
-                          <widget class="Gtk.TreeView" id="treeview3">
+                          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow1">
+                            <property name="MemberName" />
+                            <property name="ShadowType">In</property>
+                            <child>
+                              <widget class="Gtk.TreeView" id="treeview3">
+                                <property name="MemberName" />
+                                <property name="CanFocus">True</property>
+                                <property name="ShowScrollbars">True</property>
+                              </widget>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="Position">0</property>
+                            <property name="AutoSize">True</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="Gtk.Button" id="button3">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
-                            <property name="ShowScrollbars">True</property>
+                            <property name="Type">TextOnly</property>
+                            <property name="Label" translatable="yes">GtkButton</property>
+                            <property name="UseUnderline">True</property>
                           </widget>
+                          <packing>
+                            <property name="Position">1</property>
+                            <property name="AutoSize">True</property>
+                            <property name="Expand">False</property>
+                            <property name="Fill">False</property>
+                          </packing>
                         </child>
                       </widget>
                     </child>
                   </widget>
                 </child>
                 <child>
-                  <widget class="Gtk.Label" id="GtkLabel3">
+                  <widget class="Gtk.Label" id="GtkLabel5">
                     <property name="MemberName" />
-                    <property name="LabelProp" translatable="yes">&lt;b&gt;User&lt;/b&gt;</property>
+                    <property name="LabelProp" translatable="yes">&lt;b&gt;GtkFrame&lt;/b&gt;</property>
                     <property name="UseMarkup">True</property>
                   </widget>
                   <packing>
@@ -116,28 +174,70 @@
                 </child>
               </widget>
               <packing>
-                <property name="Position">0</property>
-                <property name="AutoSize">True</property>
-                <property name="Expand">False</property>
-                <property name="Fill">False</property>
+                <property name="Resize">False</property>
               </packing>
             </child>
             <child>
-              <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow1">
+              <widget class="Gtk.VBox" id="vbox4">
                 <property name="MemberName" />
-                <property name="ShadowType">In</property>
+                <property name="Spacing">6</property>
                 <child>
-                  <widget class="Gtk.TreeView" id="treeview2">
+                  <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
                     <property name="MemberName" />
-                    <property name="CanFocus">True</property>
-                    <property name="ShowScrollbars">True</property>
+                    <property name="ShadowType">In</property>
+                    <child>
+                      <widget class="Gtk.TreeView" id="treeview2">
+                        <property name="MemberName" />
+                        <property name="CanFocus">True</property>
+                        <property name="ShowScrollbars">True</property>
+                      </widget>
+                    </child>
                   </widget>
+                  <packing>
+                    <property name="Position">0</property>
+                    <property name="AutoSize">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.HBox" id="hbox1">
+                    <property name="MemberName" />
+                    <property name="Spacing">6</property>
+                    <child>
+                      <widget class="Gtk.Entry" id="entry1">
+                        <property name="MemberName" />
+                        <property name="CanFocus">True</property>
+                        <property name="IsEditable">True</property>
+                        <property name="InvisibleChar">•</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">0</property>
+                        <property name="AutoSize">True</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="Gtk.Button" id="button2">
+                        <property name="MemberName" />
+                        <property name="CanFocus">True</property>
+                        <property name="Type">TextOnly</property>
+                        <property name="Label" translatable="yes">GtkButton</property>
+                        <property name="UseUnderline">True</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">1</property>
+                        <property name="AutoSize">True</property>
+                        <property name="Expand">False</property>
+                        <property name="Fill">False</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="Position">1</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                  </packing>
                 </child>
               </widget>
-              <packing>
-                <property name="Position">1</property>
-                <property name="AutoSize">True</property>
-              </packing>
             </child>
           </widget>
           <packing>

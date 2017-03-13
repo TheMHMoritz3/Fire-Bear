@@ -9,8 +9,14 @@ namespace LinuxClient
 		{
 			Application.Init ();
 			MainWindow win = new MainWindow ();
+			win.DeleteEvent += OnDelete;
 			win.Show ();
 			Application.Run ();
+		}
+
+		static void OnDelete (object o, DeleteEventArgs e)
+		{
+			Application.Quit ();
 		}
 	}
 }
