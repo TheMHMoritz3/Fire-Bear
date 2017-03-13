@@ -118,4 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="About_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\About-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contacts_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contacts-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Settings_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Twitter_64" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAJPSURBVHhe7ZrhTfQwDEBvBEZgBDaADWAD2AA2gA1gA9gANoANYAPYADYAP3GRSuX20tROwslP
+        evrQ/Whax3aS9tsEQRAEQRAEQRB0xoF4LF5vPRePxL3nRHwWvyd8FwkIAZqCa5z9/mnLxfZfD3ige1F7
+        aE0CMc6IUzEF75AfLCGqXNgjCDz8qzh8wBw/xVvxcfAb3onmPIhpAOsgLJn5Xb6Jc+VRzHiGrIKQMsvC
+        9PBI0zSdKG1AZm4t1LJ27aWmckg9wDwTxgMmyYzS5YlGpV1zrV+ieRMkotpgSPR3LU0aV6J2vTV+iC77
+        hSdRG3Ao6Uzt5XIjatcp1a0BAg1FG1QzZ7MC1gFwe3jg4tSWNvCc9IhLUUtL6wC4Y1GzdGlWDzJkbstb
+        YhVyekErXWGNZWmhFIa7wl6kPF1JA1HTpC5L3/AGWvsiujK3D+hBstIVTljawL3ocUr9g9e21coqb4t6
+        zQK2v1VgBeixF7i8AJmixyBUSf8hBKGXcmAymkFjZPmhBrWbq6F799fglTOboWSrTVG15jeGmS85GVrr
+        8u4/F+uj7FLdt745cBPazXnr8s6vBFaDFsfjJo1vDl6U1OoJ7oeeUsgGAkFGeAWj6Zq/BL72WH3wSPLw
+        BLlruMHxh0oLabZdPzwd2fID59Bua57/vcF7wpLP2jnSR5pudBLUM7PAlte6rqekkXaX8uz8vJc6ap2A
+        dw2bEMsdIEElw6qf6ddC42PdLzkOs6TxPqGLGreCmiV9kcBQMkmyht//3SwHQRAEQRAEQbCPbDY/0FVb
+        CcS15yIAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

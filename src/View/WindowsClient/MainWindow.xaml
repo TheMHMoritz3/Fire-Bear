@@ -7,6 +7,10 @@
         xmlns:Widgets="clr-namespace:WindowsClient.Widgets.Widgets" x:Class="WindowsClient.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="461" Width="849">
+    <Window.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </Window.Resources>
     <DockPanel>
         <Menu x:Name="_MainMenu" HorizontalAlignment="Stretch" DockPanel.Dock="Top" >
             <MenuItem Header="File" >
@@ -24,6 +28,8 @@
                 <Separator />
                 <MenuItem x:Name="_LicenceAction" Header="Licence"/>
                 <MenuItem x:Name="_ContributionAction" Header="Contribution"/>
+                <MenuItem x:Name="_ThirdPartyAction" Header="Thrird Party"/>
+                <MenuItem x:Name="_TwitterAction" Header="Twitter The_MHMoritz3"/>
             </MenuItem>
         </Menu>
         <Widgets:MessageAndUserWidget x:Name="_MessagesAndUserWidget" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" />
