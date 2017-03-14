@@ -1,7 +1,7 @@
 ﻿using System;
 using Model.Manager.States;
 
-namespace LinuxClient
+namespace LinuxClient.States
 {
 	public class DialogState : IState
 	{

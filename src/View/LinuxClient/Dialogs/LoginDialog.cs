@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LinuxClient
+namespace LinuxClient.Dialogs
 {
 	public partial class LoginDialog : Gtk.Dialog
 	{
