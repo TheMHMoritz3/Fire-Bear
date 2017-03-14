@@ -43,9 +43,11 @@
     <Compile Include="Data\Contact.cs" />
     <Compile Include="Data\LoginData.cs" />
     <Compile Include="Data\Security\SecureStringConverter.cs" />
+    <Compile Include="Data\XML\Connection\BeginElement.cs" />
     <Compile Include="Data\XML\XMLElement.cs" />
     <Compile Include="Data\XML\XMLParser.cs" />
     <Compile Include="Enumeration\EncodingTypes.cs" />
+    <Compile Include="Exceptions\WrongElementToParse.cs" />
     <Compile Include="Manager\IConfiguration.cs" />
     <Compile Include="Manager\IConnection.cs" />
     <Compile Include="Manager\IInstanceManager.cs" />
