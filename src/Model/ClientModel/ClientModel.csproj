@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Manager\Configuration.cs" />
+    <Compile Include="Manager\Connection.cs" />
     <Compile Include="Manager\States\ConfigurationSaveState.cs" />
+    <Compile Include="Manager\States\ConnectionState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
