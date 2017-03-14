@@ -59,7 +59,6 @@
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\..\..\..\..\..\home\moritz\Schreibtisch\Documents\GitHub\Fire-Bear\res\Twitter-64.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -67,6 +66,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\LinuxClient.MainWindow.cs" />
+    <Compile Include="Dialogs\LoginDialog.cs" />
+    <Compile Include="gtk-gui\LinuxClient.LoginDialog.cs" />
+    <Compile Include="gtk-gui\LinuxClient.DialogState.cs" />
+    <Compile Include="States\DialogState.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Model\ClientModel\ClientModel.csproj">
@@ -79,4 +82,10 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Dialogs\" />
+    <Folder Include="Manager\" />
+    <Folder Include="States\" />
+    <Folder Include="Widgets\" />
+  </ItemGroup>
 </Project>

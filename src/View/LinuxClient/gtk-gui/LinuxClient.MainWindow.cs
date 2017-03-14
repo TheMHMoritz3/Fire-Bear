@@ -46,9 +46,9 @@ namespace LinuxClient
 		
 		private global::Gtk.TreeView treeview3;
 		
-		private global::Gtk.Button button3;
+		private global::Gtk.Button UserButton;
 		
-		private global::Gtk.Label GtkLabel5;
+		private global::Gtk.Label GroupBoxLabel;
 		
 		private global::Gtk.VBox vbox4;
 		
@@ -63,10 +63,6 @@ namespace LinuxClient
 		private global::Gtk.Button button2;
 		
 		private global::Gtk.Statusbar statusbar2;
-		
-		private global::Gtk.Label _StatusLabel;
-		
-		private global::Gtk.ProgressBar _ProgressBar;
 
 		protected virtual void Build ()
 		{
@@ -158,23 +154,23 @@ namespace LinuxClient
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.GtkScrolledWindow1]));
 			w4.Position = 0;
 			// Container child vbox5.Gtk.Box+BoxChild
-			this.button3 = new global::Gtk.Button ();
-			this.button3.CanFocus = true;
-			this.button3.Name = "button3";
-			this.button3.UseUnderline = true;
-			this.button3.Label = global::Mono.Unix.Catalog.GetString ("GtkButton");
-			this.vbox5.Add (this.button3);
-			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.button3]));
+			this.UserButton = new global::Gtk.Button ();
+			this.UserButton.CanFocus = true;
+			this.UserButton.Name = "UserButton";
+			this.UserButton.UseUnderline = true;
+			this.UserButton.Label = global::Mono.Unix.Catalog.GetString ("Add");
+			this.vbox5.Add (this.UserButton);
+			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.UserButton]));
 			w5.Position = 1;
 			w5.Expand = false;
 			w5.Fill = false;
 			this.GtkAlignment.Add (this.vbox5);
 			this.frame1.Add (this.GtkAlignment);
-			this.GtkLabel5 = new global::Gtk.Label ();
-			this.GtkLabel5.Name = "GtkLabel5";
-			this.GtkLabel5.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>GtkFrame</b>");
-			this.GtkLabel5.UseMarkup = true;
-			this.frame1.LabelWidget = this.GtkLabel5;
+			this.GroupBoxLabel = new global::Gtk.Label ();
+			this.GroupBoxLabel.Name = "GroupBoxLabel";
+			this.GroupBoxLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Users</b>");
+			this.GroupBoxLabel.UseMarkup = true;
+			this.frame1.LabelWidget = this.GroupBoxLabel;
 			this.hpaned1.Add (this.frame1);
 			global::Gtk.Paned.PanedChild w8 = ((global::Gtk.Paned.PanedChild)(this.hpaned1 [this.frame1]));
 			w8.Resize = false;
@@ -212,7 +208,7 @@ namespace LinuxClient
 			this.button2.CanFocus = true;
 			this.button2.Name = "button2";
 			this.button2.UseUnderline = true;
-			this.button2.Label = global::Mono.Unix.Catalog.GetString ("GtkButton");
+			this.button2.Label = global::Mono.Unix.Catalog.GetString ("Send");
 			this.hbox1.Add (this.button2);
 			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.button2]));
 			w12.Position = 1;
@@ -231,26 +227,11 @@ namespace LinuxClient
 			this.statusbar2 = new global::Gtk.Statusbar ();
 			this.statusbar2.Name = "statusbar2";
 			this.statusbar2.Spacing = 6;
-			// Container child statusbar2.Gtk.Box+BoxChild
-			this._StatusLabel = new global::Gtk.Label ();
-			this._StatusLabel.Name = "_StatusLabel";
-			this._StatusLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("label1");
-			this.statusbar2.Add (this._StatusLabel);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.statusbar2 [this._StatusLabel]));
-			w16.Position = 1;
+			this.vbox2.Add (this.statusbar2);
+			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.statusbar2]));
+			w16.Position = 2;
 			w16.Expand = false;
 			w16.Fill = false;
-			// Container child statusbar2.Gtk.Box+BoxChild
-			this._ProgressBar = new global::Gtk.ProgressBar ();
-			this._ProgressBar.Name = "_ProgressBar";
-			this.statusbar2.Add (this._ProgressBar);
-			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.statusbar2 [this._ProgressBar]));
-			w17.Position = 2;
-			this.vbox2.Add (this.statusbar2);
-			global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.statusbar2]));
-			w18.Position = 2;
-			w18.Expand = false;
-			w18.Fill = false;
 			this.Add (this.vbox2);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
