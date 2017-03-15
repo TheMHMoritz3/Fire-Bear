@@ -298,7 +298,7 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="Gtk.Entry" id="entry1">
+                  <widget class="Gtk.Entry" id="UsernameLineEdit">
                     <property name="MemberName" />
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
@@ -334,7 +334,7 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="Gtk.Entry" id="entry2">
+                  <widget class="Gtk.Entry" id="ServerLineEdit">
                     <property name="MemberName" />
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
@@ -370,7 +370,7 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="Gtk.Entry" id="entry3">
+                  <widget class="Gtk.Entry" id="PasswordLineEdit">
                     <property name="MemberName" />
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
@@ -416,6 +416,7 @@
             <property name="Type">StockItem</property>
             <property name="StockId">gtk-cancel</property>
             <property name="ResponseId">-6</property>
+            <signal name="Clicked" handler="onCancelClicked" />
             <property name="label">gtk-cancel</property>
           </widget>
           <packing>
@@ -432,6 +433,7 @@
             <property name="Type">StockItem</property>
             <property name="StockId">gtk-ok</property>
             <property name="ResponseId">-5</property>
+            <signal name="Clicked" handler="onOkClicked" />
             <property name="label">gtk-ok</property>
           </widget>
           <packing>
