@@ -10,19 +10,19 @@ namespace LinuxClient.Dialogs
 		
 		private global::Gtk.Label UsernameLabel;
 		
-		private global::Gtk.Entry entry1;
+		private global::Gtk.Entry UsernameLineEdit;
 		
 		private global::Gtk.HBox hbox2;
 		
 		private global::Gtk.Label ServerLabel;
 		
-		private global::Gtk.Entry entry2;
+		private global::Gtk.Entry ServerLineEdit;
 		
 		private global::Gtk.HBox hbox3;
 		
 		private global::Gtk.Label PasswortLabel;
 		
-		private global::Gtk.Entry entry3;
+		private global::Gtk.Entry PasswordLineEdit;
 		
 		private global::Gtk.Button buttonCancel;
 		
@@ -57,13 +57,13 @@ namespace LinuxClient.Dialogs
 			w2.Expand = false;
 			w2.Fill = false;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.entry1 = new global::Gtk.Entry ();
-			this.entry1.CanFocus = true;
-			this.entry1.Name = "entry1";
-			this.entry1.IsEditable = true;
-			this.entry1.InvisibleChar = '•';
-			this.hbox1.Add (this.entry1);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.entry1]));
+			this.UsernameLineEdit = new global::Gtk.Entry ();
+			this.UsernameLineEdit.CanFocus = true;
+			this.UsernameLineEdit.Name = "UsernameLineEdit";
+			this.UsernameLineEdit.IsEditable = true;
+			this.UsernameLineEdit.InvisibleChar = '•';
+			this.hbox1.Add (this.UsernameLineEdit);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.UsernameLineEdit]));
 			w3.Position = 1;
 			this.vbox2.Add (this.hbox1);
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox1]));
@@ -84,13 +84,13 @@ namespace LinuxClient.Dialogs
 			w5.Expand = false;
 			w5.Fill = false;
 			// Container child hbox2.Gtk.Box+BoxChild
-			this.entry2 = new global::Gtk.Entry ();
-			this.entry2.CanFocus = true;
-			this.entry2.Name = "entry2";
-			this.entry2.IsEditable = true;
-			this.entry2.InvisibleChar = '•';
-			this.hbox2.Add (this.entry2);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.entry2]));
+			this.ServerLineEdit = new global::Gtk.Entry ();
+			this.ServerLineEdit.CanFocus = true;
+			this.ServerLineEdit.Name = "ServerLineEdit";
+			this.ServerLineEdit.IsEditable = true;
+			this.ServerLineEdit.InvisibleChar = '•';
+			this.hbox2.Add (this.ServerLineEdit);
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.ServerLineEdit]));
 			w6.Position = 1;
 			this.vbox2.Add (this.hbox2);
 			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox2]));
@@ -111,14 +111,14 @@ namespace LinuxClient.Dialogs
 			w8.Expand = false;
 			w8.Fill = false;
 			// Container child hbox3.Gtk.Box+BoxChild
-			this.entry3 = new global::Gtk.Entry ();
-			this.entry3.CanFocus = true;
-			this.entry3.Name = "entry3";
-			this.entry3.IsEditable = true;
-			this.entry3.Visibility = false;
-			this.entry3.InvisibleChar = '•';
-			this.hbox3.Add (this.entry3);
-			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.entry3]));
+			this.PasswordLineEdit = new global::Gtk.Entry ();
+			this.PasswordLineEdit.CanFocus = true;
+			this.PasswordLineEdit.Name = "PasswordLineEdit";
+			this.PasswordLineEdit.IsEditable = true;
+			this.PasswordLineEdit.Visibility = false;
+			this.PasswordLineEdit.InvisibleChar = '•';
+			this.hbox3.Add (this.PasswordLineEdit);
+			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.PasswordLineEdit]));
 			w9.Position = 1;
 			this.vbox2.Add (this.hbox3);
 			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox3]));
@@ -167,6 +167,8 @@ namespace LinuxClient.Dialogs
 			this.DefaultWidth = 350;
 			this.DefaultHeight = 138;
 			this.Show ();
+			this.buttonCancel.Clicked += new global::System.EventHandler (this.onCancelClicked);
+			this.buttonOk.Clicked += new global::System.EventHandler (this.onOkClicked);
 		}
 	}
 }
