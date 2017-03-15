@@ -239,6 +239,7 @@ namespace LinuxClient
 			this.DefaultWidth = 1029;
 			this.DefaultHeight = 479;
 			this.Show ();
+			this.LoginAction.Activated += new global::System.EventHandler (this.onLoginActionClicked);
 		}
 	}
 }

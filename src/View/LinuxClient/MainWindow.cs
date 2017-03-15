@@ -1,4 +1,5 @@
 ﻿using System;
+using LinuxClient.Dialogs;
 
 namespace LinuxClient
 {
@@ -17,7 +18,12 @@ namespace LinuxClient
 
 
 
-		Gtk.TreeView UserView;
+		Gtk.TreeView UserView;
+		protected void onLoginActionClicked (object sender, EventArgs e)
+		{
+			LoginDialog dialog = new LoginDialog();
+			dialog.Show();
+		}
 	}
 }
 
