@@ -14,13 +14,25 @@ namespace LinuxClient.States
 
 		public DialogState ()
 		{
-			throw new NotImplementedException ("LinuxClient.DialogState.DialogState()");
+			_CurrentState = DialogStates.NotDefined;
 		}
 
 		public int getState()
 		{
-			throw new NotImplementedException ("LinuxClient.DialogState.getState()");
+			return (int)_CurrentState;
 		}
+
+		public DialogStates CurrentState
+		{
+			get {
+				return _CurrentState;
+			}
+			set {
+				_CurrentState = value;
+			}
+		}
+
+		private DialogStates _CurrentState;
 	}
 }
 	

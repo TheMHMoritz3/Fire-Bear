@@ -14,3 +14,8 @@ You need Visual Studio and then you can get startet. On Windows you have to open
 You need Monodovelop and then you are good to go. Only open in `./win32/Linux-Solution/` the `Linux-Solution.sln`-File.
 
 More details in the Wiki 
+
+## License
+The Licence is the General Public License 3.0. You are able to Read the License in the `LICENSE`-File.
+
+All Rights Reseved

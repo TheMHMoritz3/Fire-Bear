@@ -69,6 +69,8 @@
     <Compile Include="Dialogs\LoginDialog.cs" />
     <Compile Include="States\DialogState.cs" />
     <Compile Include="gtk-gui\LinuxClient.Dialogs.LoginDialog.cs" />
+    <Compile Include="Dialogs\AddContactDialog.cs" />
+    <Compile Include="gtk-gui\LinuxClient.Dialogs.AddContactDialog.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
