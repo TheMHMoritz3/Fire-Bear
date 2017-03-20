@@ -16,9 +16,13 @@ namespace LinuxClient
 			frame1.Add (UserView);
 		}
 
+		protected void onAddClicked (object sender, EventArgs e)
+		{
+			AddContactDialog dialog = new AddContactDialog ();
+			dialog.Show ();
+		}
 
-
-		Gtk.TreeView UserView;
+		Gtk.TreeView UserView;
 		protected void onLoginActionClicked (object sender, EventArgs e)
 		{
 			LoginDialog dialog = new LoginDialog();

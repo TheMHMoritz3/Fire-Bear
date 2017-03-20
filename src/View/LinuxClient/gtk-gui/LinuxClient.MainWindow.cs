@@ -240,6 +240,7 @@ namespace LinuxClient
 			this.DefaultHeight = 479;
 			this.Show ();
 			this.LoginAction.Activated += new global::System.EventHandler (this.onLoginActionClicked);
+			this.UserButton.Clicked += new global::System.EventHandler (this.onAddClicked);
 		}
 	}
 }

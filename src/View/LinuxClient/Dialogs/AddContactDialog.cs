@@ -3,12 +3,12 @@ using LinuxClient.States;
 
 namespace LinuxClient.Dialogs
 {
-	public partial class LoginDialog : Gtk.Dialog
+	public partial class AddContactDialog : Gtk.Dialog
 	{
-		public LoginDialog ()
+		public AddContactDialog ()
 		{
-			this.Build ();
 			_CurrentState = new DialogState ();
+			this.Build ();
 		}
 
 		protected void onCancelClicked (object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace LinuxClient.Dialogs
 			return _CurrentState;
 		}
 
-		private DialogState _CurrentState;
+		private DialogState _CurrentState; 
 	}
 }
 
