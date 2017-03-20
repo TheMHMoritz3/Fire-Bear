@@ -28,7 +28,7 @@
                 <Separator />
                 <MenuItem x:Name="_LicenceAction" Header="Licence"/>
                 <MenuItem x:Name="_ContributionAction" Header="Contribution"/>
-                <MenuItem x:Name="_ThirdPartyAction" Header="Thrird Party"/>
+                <MenuItem x:Name="_ThirdPartyAction" Header="Third Party"/>
                 <MenuItem x:Name="_TwitterAction" Header="Twitter The_MHMoritz3"/>
             </MenuItem>
         </Menu>

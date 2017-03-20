@@ -66,16 +66,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\LinuxClient.MainWindow.cs" />
+    <Compile Include="Dialogs\LoginDialog.cs" />
+    <Compile Include="States\DialogState.cs" />
+    <Compile Include="gtk-gui\LinuxClient.Dialogs.LoginDialog.cs" />
+    <Compile Include="Dialogs\AddContactDialog.cs" />
+    <Compile Include="gtk-gui\LinuxClient.Dialogs.AddContactDialog.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Dialogs\" />
+    <Folder Include="Manager\" />
+    <Folder Include="States\" />
+    <Folder Include="Widgets\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Model\ClientModel\ClientModel.csproj">
-      <Project>{DBF7E81B-5BC7-4D86-9628-A824980115B9}</Project>
-      <Name>ClientModel</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Model\Model\Model.csproj">
       <Project>{99C600C9-D31F-45C9-9E09-55059AF65DA1}</Project>
       <Name>Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Model\ClientModel\ClientModel.csproj">
+      <Project>{DBF7E81B-5BC7-4D86-9628-A824980115B9}</Project>
+      <Name>ClientModel</Name>
+    </ProjectReference>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
