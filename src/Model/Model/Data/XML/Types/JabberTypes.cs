@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Data.XML
+namespace Model.Data.XML.Types
 {
-    interface XMLElement
+    public enum jabber
     {
-
+        client,
+        server
     }
 }

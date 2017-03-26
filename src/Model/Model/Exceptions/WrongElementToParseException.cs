@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Exceptions
 {
-    public class WrongElementToParse : Exception
+    public class WrongElementToParseException : Exception
     {
     }
 }
