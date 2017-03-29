@@ -10,5 +10,6 @@ namespace Model.Data.XML
     interface XMLElement
     {
         ElementType getElementType();
+        string toXML();
     }
 }

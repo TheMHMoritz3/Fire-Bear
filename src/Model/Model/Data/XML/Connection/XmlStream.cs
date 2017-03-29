@@ -10,6 +10,9 @@ namespace Model.Data.XML.Connection
 {
     public class XmlStream : XMLElement
     {
+        private XmlStream()
+        { }
+
         public static XmlStream parse(string stringToParse)
         {
             String[] elements = stringToParse.Split('>');
@@ -21,20 +24,37 @@ namespace Model.Data.XML.Connection
                 returnValue._XmlVersion = Convert.ToDouble(versionString);
 
                 string[] elementParts = elements[1].Split(' ');
-                if (elementParts.Length < 1)
+                if (elementParts.Length < 7)
                     throw new WrongElementToParseException();
 
                 if (!elementParts[0].Equals("stream:stream"))
                     throw new WrongElementToParseException();
 
-                returnValue._XmlnsStream = elementParts[1].Remove(0, elementParts[1].IndexOf('"')).Remove(elementParts[1].IndexOf('"'));
-                returnValue._Id = Convert.ToInt32(elementParts[2].Remove(0, elementParts[2].IndexOf('"')).Remove(elementParts[2].IndexOf('"')));
-                returnValue._XmlnsStream = elementParts[1].Remove(0, elementParts[1].IndexOf('"')).Remove(elementParts[1].IndexOf('"'));
+                if (elementParts[1].Remove(0, elementParts[1].IndexOf('\'')).Remove(elementParts[1].IndexOf('\'')).Equals("jabber:client"))
+                    returnValue._Xmlns = jabber.client;
+                else
+                    returnValue._Xmlns = jabber.server;
+
+                returnValue._XmlnsStream = elementParts[2].Remove(0, elementParts[2].IndexOf('\'')).Remove(elementParts[2].IndexOf('\''));
+                returnValue._Id = Convert.ToInt32(elementParts[3].Remove(0, elementParts[3].IndexOf('\'')).Remove(elementParts[3].IndexOf('\'')));
+                returnValue._From = elementParts[4].Remove(0, elementParts[4].IndexOf('\'')).Remove(elementParts[4].IndexOf('\''));
+                returnValue._StreamVersion = Convert.ToDouble(elementParts[5].Remove(0, elementParts[5].IndexOf('\'')).Remove(elementParts[5].IndexOf('\'')));
+                returnValue._XmlLang = elementParts[6].Remove(0, elementParts[6].IndexOf('\'')).Remove(elementParts[6].IndexOf('\''));
             }
             catch(Exception ex)
             {
                 throw new WrongElementToParseException();
             }
+            return returnValue;
+        }
+
+        public static XmlStream createNewStreamElement()
+        {
+            XmlStream returnValue = new XmlStream();
+
+            returnValue._XmlVersion=1.0;
+
+
             return returnValue;
         }
 
@@ -107,6 +127,19 @@ namespace Model.Data.XML.Connection
             }
         }
 
+        public string From
+        {
+            get
+            {
+                return _From;
+            }
+        }
+
+        public string toXML()
+        {
+            return "";
+        }
+
         private double _StreamVersion;
         private double _XmlVersion;
         private string _XmlnsStream;
@@ -115,6 +148,7 @@ namespace Model.Data.XML.Connection
         private string _To;
         private string _XmlLang;
         private string _XmlnsXml;
+        private string _From;
         private readonly ElementType _ElementType = ElementType.StreamElement;
     }
 }

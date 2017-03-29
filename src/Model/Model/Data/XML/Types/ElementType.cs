@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Model.Data.XML.Types
 {
-    enum ElementType
+    public enum ElementType
     {
-        BeginElement
+        StreamElement
     }
 }
