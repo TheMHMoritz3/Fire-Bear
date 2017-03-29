@@ -44,6 +44,7 @@
     <Compile Include="Data\LoginData.cs" />
     <Compile Include="Data\Security\SecureStringConverter.cs" />
     <Compile Include="Data\XML\Connection\XmlStream.cs" />
+    <Compile Include="Data\XML\Types\ElementType.cs" />
     <Compile Include="Data\XML\Types\JabberTypes.cs" />
     <Compile Include="Data\XML\XMLElement.cs" />
     <Compile Include="Data\XML\XMLParser.cs" />

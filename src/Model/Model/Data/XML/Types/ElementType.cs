@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Model.Data.XML.Types;
 
-namespace Model.Data.XML
+namespace Model.Data.XML.Types
 {
-    interface XMLElement
+    enum ElementType
     {
-        ElementType getElementType();
+        BeginElement
     }
 }
