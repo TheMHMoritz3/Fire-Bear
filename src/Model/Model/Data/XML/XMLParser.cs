@@ -8,7 +8,7 @@ namespace Model.Data.XML
 {
     class XMLParser
     {
-        public static XMLElement getXMlElementOfString(string value)
+        public static XmlElement getXMlElementOfString(string value)
         {
             throw new NotImplementedException();
         }

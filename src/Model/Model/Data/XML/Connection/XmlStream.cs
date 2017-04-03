@@ -8,7 +8,7 @@ using Model.Data.XML.Types;
 
 namespace Model.Data.XML.Connection
 {
-    public class XmlStream : XMLElement
+    public class XmlStream : XmlElement
     {
         private XmlStream()
         { }

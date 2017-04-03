@@ -7,7 +7,7 @@ using Model.Data.XML.Types;
 
 namespace Model.Data.XML
 {
-    interface XMLElement
+    interface XmlElement
     {
         ElementType getElementType();
         string toXML();

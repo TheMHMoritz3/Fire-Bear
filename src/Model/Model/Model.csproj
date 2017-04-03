@@ -46,8 +46,8 @@
     <Compile Include="Data\XML\Connection\XmlStream.cs" />
     <Compile Include="Data\XML\Types\ElementType.cs" />
     <Compile Include="Data\XML\Types\JabberTypes.cs" />
-    <Compile Include="Data\XML\XMLElement.cs" />
-    <Compile Include="Data\XML\XMLParser.cs" />
+    <Compile Include="Data\XML\XmlElement.cs" />
+    <Compile Include="Data\XML\XmlParser.cs" />
     <Compile Include="Enumeration\EncodingTypes.cs" />
     <Compile Include="Exceptions\WrongElementToParseException.cs" />
     <Compile Include="Manager\IConfiguration.cs" />
