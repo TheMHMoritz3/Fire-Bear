@@ -48,13 +48,16 @@ namespace Model.Data.XML.Connection
             return returnValue;
         }
 
-        public static XmlStream createNewStreamElement()
+        public static XmlStream createNewStreamElement(string to, string lang)
         {
             XmlStream returnValue = new XmlStream();
 
             returnValue._XmlVersion=1.0;
-
-
+            returnValue._XmlnsStream = "http://etherx.jabber.org/streams";
+            returnValue._StreamVersion = 1.0;
+            returnValue._To = to;
+            returnValue._Xmlns = jabber.client;
+            returnValue._XmlnsXml = "http://www.w3.org/XML/1998/namespace";
             return returnValue;
         }
 
@@ -137,7 +140,13 @@ namespace Model.Data.XML.Connection
 
         public string toXML()
         {
-            return "";
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<?xml version\'").Append(_XmlVersion).Append("\'?>\n");
+            sb.Append("<stream:stream xmlns:stream=\'").Append(_XmlnsStream).Append("\' version=\'").Append(_StreamVersion).Append("\' xmlns=\'");
+            if (_Xmlns == jabber.client)
+                sb.Append("jabber:client").Append("\'");
+            sb.Append(" to=\'").Append(_To).Append("\' xml:lang=\'").Append(_XmlLang).Append("\' xmlns:xml=\'").Append(_XmlnsXml).Append("\'>");
+            return sb.ToString();
         }
 
         private double _StreamVersion;
