@@ -43,6 +43,7 @@
     <Compile Include="Data\Contact.cs" />
     <Compile Include="Data\LoginData.cs" />
     <Compile Include="Data\Security\SecureStringConverter.cs" />
+    <Compile Include="Data\XML\Connection\StreamFeatures.cs" />
     <Compile Include="Data\XML\Connection\XmlStream.cs" />
     <Compile Include="Data\XML\Types\ElementType.cs" />
     <Compile Include="Data\XML\Types\JabberTypes.cs" />

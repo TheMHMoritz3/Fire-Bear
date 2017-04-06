@@ -137,7 +137,10 @@ namespace Model.Data.XML.Connection
                 return _From;
             }
         }
-
+        /// <summary>
+        /// Only for sending Purposes to uses
+        /// </summary>
+        /// <returns></returns>
         public string toXML()
         {
             StringBuilder sb = new StringBuilder();
